@@ -1,0 +1,99 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://localhost:8080/realms/master/protocol/openid-connect/token
+    body:
+      encoding: UTF-8
+      string: grant_type=password&client_id=admin-cli&username=admin&password=admin
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Referrer-Policy:
+      - no-referrer
+      X-Frame-Options:
+      - SAMEORIGIN
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Cache-Control:
+      - no-store
+      X-Content-Type-Options:
+      - nosniff
+      Set-Cookie:
+      - KC_RESTART=; Version=1; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Max-Age=0;
+        Path=/realms/master/; HttpOnly
+      - KEYCLOAK_LOCALE=; Version=1; Comment=Expiring cookie; Expires=Thu, 01-Jan-1970
+        00:00:10 GMT; Max-Age=0; Path=/realms/master/; HttpOnly
+      Pragma:
+      - no-cache
+      X-Xss-Protection:
+      - 1; mode=block
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '1818'
+    body:
+      encoding: UTF-8
+      string: '{"access_token":"eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJtTlNCYUJUR3ZncUlub2ExLWdFS1NfQVhvUUZFOFVtZ3B3aVJrYmlKaG93In0.eyJleHAiOjE2OTkyODEzNDMsImlhdCI6MTY5OTI4MTI4MywianRpIjoiZWQ2NTY4ZjYtZTYyMy00OTBkLTg4ODctNDgyYjkyZjFiYzZiIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3JlYWxtcy9tYXN0ZXIiLCJzdWIiOiJlZTg1ZDA0Ny03ZGE0LTRmN2QtOTdhYy1hYjdiM2VmODU4ODYiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJhZG1pbi1jbGkiLCJzZXNzaW9uX3N0YXRlIjoiY2MyNTU1MGUtYTRmNC00NmE5LWJjZDgtMGYxYmVhZDllZDEwIiwiYWNyIjoiMSIsInNjb3BlIjoicHJvZmlsZSBlbWFpbCIsInNpZCI6ImNjMjU1NTBlLWE0ZjQtNDZhOS1iY2Q4LTBmMWJlYWQ5ZWQxMCIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwicHJlZmVycmVkX3VzZXJuYW1lIjoiYWRtaW4ifQ.LgoTexY5f9ST_pdvr7SsC7Qz0EFIYDYUhayncu3l9vEEPhElltkR1_Wno2BsWFs28qIa8yf88Y9dH-uFhHTaTdu7fZTMphvHRJdjl61azu_-F3Dd8Ggo8ZMxtzgFhgV20LuSB9z4AjFqMhHst7jYgm9Hz0icgh6QYg8qyw6jxPZWT9clPs2TM7olrVzVB-tqHzJhhdBthAvKkuBDUw741fsoZcrr_gKQu5nbEOZot5yHJwPgcA93-LezFRaATqXV3DaTxkDS1ZAYMXHSCsPLO5zA2M02I6l0d3tYreEz5DeNSnjz9O-nXLzLOJCRi-lynJrGfXtkcjWSWIuDkII3ow","expires_in":60,"refresh_expires_in":1800,"refresh_token":"eyJhbGciOiJIUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICIwNDUxMTRkNC03YzEwLTRkZjItODUwYy01MzMyM2VlOGNhNzAifQ.eyJleHAiOjE2OTkyODMwODMsImlhdCI6MTY5OTI4MTI4MywianRpIjoiODgxOGJlMDAtNDM3ZS00ODI4LTk4NGUtMThkMzdiNTY2NjZkIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3JlYWxtcy9tYXN0ZXIiLCJhdWQiOiJodHRwOi8vbG9jYWxob3N0OjgwODAvcmVhbG1zL21hc3RlciIsInN1YiI6ImVlODVkMDQ3LTdkYTQtNGY3ZC05N2FjLWFiN2IzZWY4NTg4NiIsInR5cCI6IlJlZnJlc2giLCJhenAiOiJhZG1pbi1jbGkiLCJzZXNzaW9uX3N0YXRlIjoiY2MyNTU1MGUtYTRmNC00NmE5LWJjZDgtMGYxYmVhZDllZDEwIiwic2NvcGUiOiJwcm9maWxlIGVtYWlsIiwic2lkIjoiY2MyNTU1MGUtYTRmNC00NmE5LWJjZDgtMGYxYmVhZDllZDEwIn0.zjqJWI2533iM0kqL5jImBfCfEi337iLSRkKZE3zxYKE","token_type":"Bearer","not-before-policy":0,"session_state":"cc25550e-a4f4-46a9-bcd8-0f1bead9ed10","scope":"profile
+        email"}'
+  recorded_at: Mon, 06 Nov 2023 14:34:43 GMT
+- request:
+    method: post
+    uri: http://localhost:8080/admin/realms/master/users
+    body:
+      encoding: UTF-8
+      string: '{"username":"john.doe","invalid":true}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJtTlNCYUJUR3ZncUlub2ExLWdFS1NfQVhvUUZFOFVtZ3B3aVJrYmlKaG93In0.eyJleHAiOjE2OTkyODEzNDMsImlhdCI6MTY5OTI4MTI4MywianRpIjoiZWQ2NTY4ZjYtZTYyMy00OTBkLTg4ODctNDgyYjkyZjFiYzZiIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3JlYWxtcy9tYXN0ZXIiLCJzdWIiOiJlZTg1ZDA0Ny03ZGE0LTRmN2QtOTdhYy1hYjdiM2VmODU4ODYiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJhZG1pbi1jbGkiLCJzZXNzaW9uX3N0YXRlIjoiY2MyNTU1MGUtYTRmNC00NmE5LWJjZDgtMGYxYmVhZDllZDEwIiwiYWNyIjoiMSIsInNjb3BlIjoicHJvZmlsZSBlbWFpbCIsInNpZCI6ImNjMjU1NTBlLWE0ZjQtNDZhOS1iY2Q4LTBmMWJlYWQ5ZWQxMCIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwicHJlZmVycmVkX3VzZXJuYW1lIjoiYWRtaW4ifQ.LgoTexY5f9ST_pdvr7SsC7Qz0EFIYDYUhayncu3l9vEEPhElltkR1_Wno2BsWFs28qIa8yf88Y9dH-uFhHTaTdu7fZTMphvHRJdjl61azu_-F3Dd8Ggo8ZMxtzgFhgV20LuSB9z4AjFqMhHst7jYgm9Hz0icgh6QYg8qyw6jxPZWT9clPs2TM7olrVzVB-tqHzJhhdBthAvKkuBDUw741fsoZcrr_gKQu5nbEOZot5yHJwPgcA93-LezFRaATqXV3DaTxkDS1ZAYMXHSCsPLO5zA2M02I6l0d3tYreEz5DeNSnjz9O-nXLzLOJCRi-lynJrGfXtkcjWSWIuDkII3ow
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Referrer-Policy:
+      - no-referrer
+      X-Frame-Options:
+      - SAMEORIGIN
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '790'
+    body:
+      encoding: UTF-8
+      string: '{"error":"Unrecognized field \"invalid\" (class org.keycloak.representations.idm.UserRepresentation),
+        not marked as ignorable (27 known properties: \"disableableCredentialTypes\",
+        \"enabled\", \"emailVerified\", \"self\", \"applicationRoles\", \"createdTimestamp\",
+        \"groups\", \"username\", \"attributes\", \"id\", \"email\", \"federationLink\",
+        \"serviceAccountClientId\", \"access\", \"origin\", \"userProfileMetadata\",
+        \"realmRoles\", \"clientRoles\", \"totp\", \"credentials\", \"lastName\",
+        \"clientConsents\", \"socialLinks\", \"firstName\", \"requiredActions\", \"notBefore\",
+        \"federatedIdentities\"])\n at [Source: (io.quarkus.vertx.http.runtime.VertxInputStream);
+        line: 1, column: 38] (through reference chain: org.keycloak.representations.idm.UserRepresentation[\"invalid\"])"}'
+  recorded_at: Mon, 06 Nov 2023 14:34:43 GMT
+recorded_with: VCR 6.2.0

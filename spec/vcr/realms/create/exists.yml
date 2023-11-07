@@ -1,0 +1,43 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://localhost:8080//admin/realms
+    body:
+      encoding: UTF-8
+      string: '{"realm":"acme-corp-realm"}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJtTlNCYUJUR3ZncUlub2ExLWdFS1NfQVhvUUZFOFVtZ3B3aVJrYmlKaG93In0.eyJleHAiOjE2OTkyODEzNDIsImlhdCI6MTY5OTI4MTI4MiwianRpIjoiYmYzMjY5NzQtMjM1NC00ODE2LTkzZGItNTQ0Yjk0MTg2ZDdhIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3JlYWxtcy9tYXN0ZXIiLCJzdWIiOiJlZTg1ZDA0Ny03ZGE0LTRmN2QtOTdhYy1hYjdiM2VmODU4ODYiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJhZG1pbi1jbGkiLCJzZXNzaW9uX3N0YXRlIjoiNmIzNWM5ZTMtZDk0Zi00ZTFlLWEwNzItNWE3MDJlMTJjYmE2IiwiYWNyIjoiMSIsInNjb3BlIjoicHJvZmlsZSBlbWFpbCIsInNpZCI6IjZiMzVjOWUzLWQ5NGYtNGUxZS1hMDcyLTVhNzAyZTEyY2JhNiIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwicHJlZmVycmVkX3VzZXJuYW1lIjoiYWRtaW4ifQ.Jl3JrBueoft3JX0iaPEZqpIUy0EUrHAGHib7XYyn6tFsP8nMd9ivIBgeoF7KBldrgz_bzBTxjVf1RguX2RGJNkjPKzUOJTyHVFsDUSSOPGn7rHLMl-dFcFfc6JAiQ8heks7lDn8KafV0Qz8BCfYbSIhtpPrYHD2OBEQBYhAkNv-V_FdPRu2FAdLpgLtaGX6T2U1QSKVGPfY2AEjZlXgZRD3REiqxvGwTu6p4gLEsjl0cL_5CpKddRF73IqSF9ySuXmCgOV-2KFYgepeqO2kVgjqRdmuE1gCMpZYNu9vDdsU5Zyale6nCE7BQI5QhUKEXVRxOnvDsQuPOFHC9FdDCcw
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 409
+      message: Conflict
+    headers:
+      Referrer-Policy:
+      - no-referrer
+      X-Frame-Options:
+      - SAMEORIGIN
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '58'
+    body:
+      encoding: UTF-8
+      string: '{"errorMessage":"Conflict detected. See logs for details"}'
+  recorded_at: Mon, 06 Nov 2023 14:34:43 GMT
+recorded_with: VCR 6.2.0

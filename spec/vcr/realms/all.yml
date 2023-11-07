@@ -1,0 +1,54 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:8080//admin/realms
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJtTlNCYUJUR3ZncUlub2ExLWdFS1NfQVhvUUZFOFVtZ3B3aVJrYmlKaG93In0.eyJleHAiOjE2OTkyODEzNDIsImlhdCI6MTY5OTI4MTI4MiwianRpIjoiYmYzMjY5NzQtMjM1NC00ODE2LTkzZGItNTQ0Yjk0MTg2ZDdhIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3JlYWxtcy9tYXN0ZXIiLCJzdWIiOiJlZTg1ZDA0Ny03ZGE0LTRmN2QtOTdhYy1hYjdiM2VmODU4ODYiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJhZG1pbi1jbGkiLCJzZXNzaW9uX3N0YXRlIjoiNmIzNWM5ZTMtZDk0Zi00ZTFlLWEwNzItNWE3MDJlMTJjYmE2IiwiYWNyIjoiMSIsInNjb3BlIjoicHJvZmlsZSBlbWFpbCIsInNpZCI6IjZiMzVjOWUzLWQ5NGYtNGUxZS1hMDcyLTVhNzAyZTEyY2JhNiIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwicHJlZmVycmVkX3VzZXJuYW1lIjoiYWRtaW4ifQ.Jl3JrBueoft3JX0iaPEZqpIUy0EUrHAGHib7XYyn6tFsP8nMd9ivIBgeoF7KBldrgz_bzBTxjVf1RguX2RGJNkjPKzUOJTyHVFsDUSSOPGn7rHLMl-dFcFfc6JAiQ8heks7lDn8KafV0Qz8BCfYbSIhtpPrYHD2OBEQBYhAkNv-V_FdPRu2FAdLpgLtaGX6T2U1QSKVGPfY2AEjZlXgZRD3REiqxvGwTu6p4gLEsjl0cL_5CpKddRF73IqSF9ySuXmCgOV-2KFYgepeqO2kVgjqRdmuE1gCMpZYNu9vDdsU5Zyale6nCE7BQI5QhUKEXVRxOnvDsQuPOFHC9FdDCcw
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Referrer-Policy:
+      - no-referrer
+      X-Frame-Options:
+      - SAMEORIGIN
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Cache-Control:
+      - no-cache
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '4153'
+    body:
+      encoding: UTF-8
+      string: '[{"id":"763409f9-9635-4a23-be9c-faa23e5a1e91","realm":"master","displayName":"Keycloak","displayNameHtml":"<div
+        class=\"kc-logo-text\"><span>Keycloak</span></div>","notBefore":0,"defaultSignatureAlgorithm":"RS256","revokeRefreshToken":false,"refreshTokenMaxReuse":0,"accessTokenLifespan":60,"accessTokenLifespanForImplicitFlow":900,"ssoSessionIdleTimeout":1800,"ssoSessionMaxLifespan":36000,"ssoSessionIdleTimeoutRememberMe":0,"ssoSessionMaxLifespanRememberMe":0,"offlineSessionIdleTimeout":2592000,"offlineSessionMaxLifespanEnabled":false,"offlineSessionMaxLifespan":5184000,"clientSessionIdleTimeout":0,"clientSessionMaxLifespan":0,"clientOfflineSessionIdleTimeout":0,"clientOfflineSessionMaxLifespan":0,"accessCodeLifespan":60,"accessCodeLifespanUserAction":300,"accessCodeLifespanLogin":1800,"actionTokenGeneratedByAdminLifespan":43200,"actionTokenGeneratedByUserLifespan":300,"oauth2DeviceCodeLifespan":600,"oauth2DevicePollingInterval":5,"enabled":true,"sslRequired":"external","registrationAllowed":false,"registrationEmailAsUsername":false,"rememberMe":false,"verifyEmail":false,"loginWithEmailAllowed":true,"duplicateEmailsAllowed":false,"resetPasswordAllowed":false,"editUsernameAllowed":false,"bruteForceProtected":false,"permanentLockout":false,"maxFailureWaitSeconds":900,"minimumQuickLoginWaitSeconds":60,"waitIncrementSeconds":60,"quickLoginCheckMilliSeconds":1000,"maxDeltaTimeSeconds":43200,"failureFactor":30,"defaultRole":{"id":"3aafd6ed-2f45-4bb9-a363-159997f79921","name":"default-roles-master","description":"${role_default-roles}","composite":true,"clientRole":false,"containerId":"763409f9-9635-4a23-be9c-faa23e5a1e91"},"requiredCredentials":["password"],"otpPolicyType":"totp","otpPolicyAlgorithm":"HmacSHA1","otpPolicyInitialCounter":0,"otpPolicyDigits":6,"otpPolicyLookAheadWindow":1,"otpPolicyPeriod":30,"otpPolicyCodeReusable":false,"otpSupportedApplications":["totpAppFreeOTPName","totpAppMicrosoftAuthenticatorName","totpAppGoogleName"],"webAuthnPolicyRpEntityName":"keycloak","webAuthnPolicySignatureAlgorithms":["ES256"],"webAuthnPolicyRpId":"","webAuthnPolicyAttestationConveyancePreference":"not
+        specified","webAuthnPolicyAuthenticatorAttachment":"not specified","webAuthnPolicyRequireResidentKey":"not
+        specified","webAuthnPolicyUserVerificationRequirement":"not specified","webAuthnPolicyCreateTimeout":0,"webAuthnPolicyAvoidSameAuthenticatorRegister":false,"webAuthnPolicyAcceptableAaguids":[],"webAuthnPolicyPasswordlessRpEntityName":"keycloak","webAuthnPolicyPasswordlessSignatureAlgorithms":["ES256"],"webAuthnPolicyPasswordlessRpId":"","webAuthnPolicyPasswordlessAttestationConveyancePreference":"not
+        specified","webAuthnPolicyPasswordlessAuthenticatorAttachment":"not specified","webAuthnPolicyPasswordlessRequireResidentKey":"not
+        specified","webAuthnPolicyPasswordlessUserVerificationRequirement":"not specified","webAuthnPolicyPasswordlessCreateTimeout":0,"webAuthnPolicyPasswordlessAvoidSameAuthenticatorRegister":false,"webAuthnPolicyPasswordlessAcceptableAaguids":[],"browserSecurityHeaders":{"contentSecurityPolicyReportOnly":"","xContentTypeOptions":"nosniff","referrerPolicy":"no-referrer","xRobotsTag":"none","xFrameOptions":"SAMEORIGIN","xXSSProtection":"1;
+        mode=block","contentSecurityPolicy":"frame-src ''self''; frame-ancestors ''self'';
+        object-src ''none'';","strictTransportSecurity":"max-age=31536000; includeSubDomains"},"smtpServer":{},"eventsEnabled":false,"eventsListeners":["jboss-logging"],"enabledEventTypes":[],"adminEventsEnabled":false,"adminEventsDetailsEnabled":false,"identityProviders":[],"identityProviderMappers":[],"internationalizationEnabled":false,"supportedLocales":[],"browserFlow":"browser","registrationFlow":"registration","directGrantFlow":"direct
+        grant","resetCredentialsFlow":"reset credentials","clientAuthenticationFlow":"clients","dockerAuthenticationFlow":"docker
+        auth","attributes":{"cibaBackchannelTokenDeliveryMode":"poll","cibaExpiresIn":"120","cibaAuthRequestedUserHint":"login_hint","parRequestUriLifespan":"60","cibaInterval":"5","realmReusableOtpCode":"false"},"userManagedAccessAllowed":false,"clientProfiles":{"profiles":[]},"clientPolicies":{"policies":[]}}]'
+  recorded_at: Mon, 06 Nov 2023 14:34:43 GMT
+recorded_with: VCR 6.2.0

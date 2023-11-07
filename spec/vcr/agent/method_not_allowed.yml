@@ -1,0 +1,92 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://localhost:8080/realms/master/protocol/openid-connect/token
+    body:
+      encoding: UTF-8
+      string: grant_type=password&client_id=admin-cli&username=admin&password=admin
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Referrer-Policy:
+      - no-referrer
+      X-Frame-Options:
+      - SAMEORIGIN
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Cache-Control:
+      - no-store
+      X-Content-Type-Options:
+      - nosniff
+      Set-Cookie:
+      - KC_RESTART=; Version=1; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Max-Age=0;
+        Path=/realms/master/; HttpOnly
+      - KEYCLOAK_LOCALE=; Version=1; Comment=Expiring cookie; Expires=Thu, 01-Jan-1970
+        00:00:10 GMT; Max-Age=0; Path=/realms/master/; HttpOnly
+      Pragma:
+      - no-cache
+      X-Xss-Protection:
+      - 1; mode=block
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '1818'
+    body:
+      encoding: UTF-8
+      string: '{"access_token":"eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJtTlNCYUJUR3ZncUlub2ExLWdFS1NfQVhvUUZFOFVtZ3B3aVJrYmlKaG93In0.eyJleHAiOjE2OTkyODEzNDQsImlhdCI6MTY5OTI4MTI4NCwianRpIjoiNGRhMDUyN2UtMDBiNy00NDM2LThlNTgtZTQ4MzJlYzkyYTY0IiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3JlYWxtcy9tYXN0ZXIiLCJzdWIiOiJlZTg1ZDA0Ny03ZGE0LTRmN2QtOTdhYy1hYjdiM2VmODU4ODYiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJhZG1pbi1jbGkiLCJzZXNzaW9uX3N0YXRlIjoiZDI2Njk1N2ItNzc4NC00YzI0LWI4N2MtZGQ4ZTkzZTkzMGQ3IiwiYWNyIjoiMSIsInNjb3BlIjoicHJvZmlsZSBlbWFpbCIsInNpZCI6ImQyNjY5NTdiLTc3ODQtNGMyNC1iODdjLWRkOGU5M2U5MzBkNyIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwicHJlZmVycmVkX3VzZXJuYW1lIjoiYWRtaW4ifQ.fUo2HT7JR2XTTdf9b2uInb-2NoyaS2tP98LLFReDmAutPJP6_deChXOtUIcGGt5NeNUg6EJiHghticUxrVda9ZoU7u5N43hB1igyTnes3CrY43720pZEs9p6Xn7-uBCDoUr7x7Bvhu-f7DYuN3WRVVCFMxzhG0W5VAirqcADAw6Y7M-A8W5KdElLnGjS36r2KkbsDkYYX1DkaOqrnMF5xlihp7SDT4qPF8eh5MgbnyF9cW2ecU5HoW6tH9GWjZF75BRdeKxT1lh4pruIbiCpWc1hY6TWD68XeFvOvmzxJiZ9urvFBLcprtWlvirsSkRhI9JgG1M5p9o6EMTj93u7nA","expires_in":60,"refresh_expires_in":1800,"refresh_token":"eyJhbGciOiJIUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICIwNDUxMTRkNC03YzEwLTRkZjItODUwYy01MzMyM2VlOGNhNzAifQ.eyJleHAiOjE2OTkyODMwODQsImlhdCI6MTY5OTI4MTI4NCwianRpIjoiODU0ZTZjZjYtYjRkYi00NzkyLWI0ZGItZGQ3NGNiZmU5NmE4IiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3JlYWxtcy9tYXN0ZXIiLCJhdWQiOiJodHRwOi8vbG9jYWxob3N0OjgwODAvcmVhbG1zL21hc3RlciIsInN1YiI6ImVlODVkMDQ3LTdkYTQtNGY3ZC05N2FjLWFiN2IzZWY4NTg4NiIsInR5cCI6IlJlZnJlc2giLCJhenAiOiJhZG1pbi1jbGkiLCJzZXNzaW9uX3N0YXRlIjoiZDI2Njk1N2ItNzc4NC00YzI0LWI4N2MtZGQ4ZTkzZTkzMGQ3Iiwic2NvcGUiOiJwcm9maWxlIGVtYWlsIiwic2lkIjoiZDI2Njk1N2ItNzc4NC00YzI0LWI4N2MtZGQ4ZTkzZTkzMGQ3In0.he-P8H5COWniJVHvUt99RSbId9g-HUbHvq1vDy1-mhs","token_type":"Bearer","not-before-policy":0,"session_state":"d266957b-7784-4c24-b87c-dd8e93e930d7","scope":"profile
+        email"}'
+  recorded_at: Mon, 06 Nov 2023 14:34:44 GMT
+- request:
+    method: put
+    uri: http://localhost:8080/admin/realms/master/users
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJtTlNCYUJUR3ZncUlub2ExLWdFS1NfQVhvUUZFOFVtZ3B3aVJrYmlKaG93In0.eyJleHAiOjE2OTkyODEzNDQsImlhdCI6MTY5OTI4MTI4NCwianRpIjoiNGRhMDUyN2UtMDBiNy00NDM2LThlNTgtZTQ4MzJlYzkyYTY0IiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3JlYWxtcy9tYXN0ZXIiLCJzdWIiOiJlZTg1ZDA0Ny03ZGE0LTRmN2QtOTdhYy1hYjdiM2VmODU4ODYiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJhZG1pbi1jbGkiLCJzZXNzaW9uX3N0YXRlIjoiZDI2Njk1N2ItNzc4NC00YzI0LWI4N2MtZGQ4ZTkzZTkzMGQ3IiwiYWNyIjoiMSIsInNjb3BlIjoicHJvZmlsZSBlbWFpbCIsInNpZCI6ImQyNjY5NTdiLTc3ODQtNGMyNC1iODdjLWRkOGU5M2U5MzBkNyIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwicHJlZmVycmVkX3VzZXJuYW1lIjoiYWRtaW4ifQ.fUo2HT7JR2XTTdf9b2uInb-2NoyaS2tP98LLFReDmAutPJP6_deChXOtUIcGGt5NeNUg6EJiHghticUxrVda9ZoU7u5N43hB1igyTnes3CrY43720pZEs9p6Xn7-uBCDoUr7x7Bvhu-f7DYuN3WRVVCFMxzhG0W5VAirqcADAw6Y7M-A8W5KdElLnGjS36r2KkbsDkYYX1DkaOqrnMF5xlihp7SDT4qPF8eh5MgbnyF9cW2ecU5HoW6tH9GWjZF75BRdeKxT1lh4pruIbiCpWc1hY6TWD68XeFvOvmzxJiZ9urvFBLcprtWlvirsSkRhI9JgG1M5p9o6EMTj93u7nA
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 405
+      message: Method Not Allowed
+    headers:
+      Referrer-Policy:
+      - no-referrer
+      X-Frame-Options:
+      - SAMEORIGIN
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '90'
+    body:
+      encoding: UTF-8
+      string: '{"error":"RESTEASY003650: No resource method found for PUT, return
+        405 with Allow header"}'
+  recorded_at: Mon, 06 Nov 2023 14:34:44 GMT
+recorded_with: VCR 6.2.0

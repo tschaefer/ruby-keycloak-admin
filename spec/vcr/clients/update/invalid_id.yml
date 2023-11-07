@@ -1,0 +1,43 @@
+---
+http_interactions:
+- request:
+    method: put
+    uri: http://localhost:8080/admin/realms/master/clients/47110815-42gg
+    body:
+      encoding: UTF-8
+      string: '{"emailVerified":true}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJtTlNCYUJUR3ZncUlub2ExLWdFS1NfQVhvUUZFOFVtZ3B3aVJrYmlKaG93In0.eyJleHAiOjE2OTkyODEzNDMsImlhdCI6MTY5OTI4MTI4MywianRpIjoiNzdiZGUzMzktNTAzMy00NmYxLWJhNGYtMjlhMzdlOWUyN2E4IiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3JlYWxtcy9tYXN0ZXIiLCJzdWIiOiJlZTg1ZDA0Ny03ZGE0LTRmN2QtOTdhYy1hYjdiM2VmODU4ODYiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJhZG1pbi1jbGkiLCJzZXNzaW9uX3N0YXRlIjoiMmJhMzMzYWEtZTNmZS00NGM5LThkNTEtNTVlODllZTM2ZDQ4IiwiYWNyIjoiMSIsInNjb3BlIjoicHJvZmlsZSBlbWFpbCIsInNpZCI6IjJiYTMzM2FhLWUzZmUtNDRjOS04ZDUxLTU1ZTg5ZWUzNmQ0OCIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwicHJlZmVycmVkX3VzZXJuYW1lIjoiYWRtaW4ifQ.P0StEXPJF5ij4Cnv9KW-GwMT5VhjK_BNNfD04M5M3oCxeROGxjAK8ZKPlzbI7zUW3pp8BF4QMQyrfPCOYj3y44YR4HqV8X_ILmyWEE5xD-wQ0SXbU2IqqPvzL9dvlbXZHYh78VuUUJ7yp8fbF2JJ3HMkGv1PxRkQ8jzbTcLbDTZcNs3_KxlHm_NIHm2rYFsiAPKBBadGj23SLESvBC5ZkHSnCFcvtEb8-oZ__Se74Ddbk-syF9J3RMCBWbe3vv_Txi-s_rWd3WTF7ikyFwBT5bIDOwBOv5GFvJPhB96VPi_vcjDDS6u_ZzOhGWJoHl7sxW4FnHgLUE_5uIpJwKHjvg
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Referrer-Policy:
+      - no-referrer
+      X-Frame-Options:
+      - SAMEORIGIN
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '33'
+    body:
+      encoding: UTF-8
+      string: '{"error":"Could not find client"}'
+  recorded_at: Mon, 06 Nov 2023 14:34:43 GMT
+recorded_with: VCR 6.2.0

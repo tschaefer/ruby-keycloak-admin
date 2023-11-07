@@ -1,0 +1,41 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://localhost:8080/realms/master/protocol/openid-connect/logout
+    body:
+      encoding: UTF-8
+      string: client_id=admin-cli&refresh_token=eyJhbGciOiJIUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICIwNDUxMTRkNC03YzEwLTRkZjItODUwYy01MzMyM2VlOGNhNzAifQ.eyJleHAiOjE2OTkyODMwNzcsImlhdCI6MTY5OTI4MTI3NywianRpIjoiZmQzYjc2MTctZjJmOS00MDcxLWE2NTgtMDFjNGU5YjAxNjVmIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3JlYWxtcy9tYXN0ZXIiLCJhdWQiOiJodHRwOi8vbG9jYWxob3N0OjgwODAvcmVhbG1zL21hc3RlciIsInN1YiI6ImVlODVkMDQ3LTdkYTQtNGY3ZC05N2FjLWFiN2IzZWY4NTg4NiIsInR5cCI6IlJlZnJlc2giLCJhenAiOiJhZG1pbi1jbGkiLCJzZXNzaW9uX3N0YXRlIjoiZGFmNDgyNGYtYmMzNi00YjFkLWJkNWMtZDk1MDJkODI3ZjJkIiwic2NvcGUiOiJwcm9maWxlIGVtYWlsIiwic2lkIjoiZGFmNDgyNGYtYmMzNi00YjFkLWJkNWMtZDk1MDJkODI3ZjJkIn0.z88-VF_tC9MOVESvktCsv5-HArtZFqWbi_eYiaAUCyM
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 204
+      message: No Content
+    headers:
+      Referrer-Policy:
+      - no-referrer
+      X-Frame-Options:
+      - SAMEORIGIN
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      X-Robots-Tag:
+      - none
+      X-Content-Type-Options:
+      - nosniff
+      Content-Security-Policy:
+      - frame-src 'self'; frame-ancestors 'self'; object-src 'none';
+      X-Xss-Protection:
+      - 1; mode=block
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Mon, 06 Nov 2023 20:54:27 GMT
+recorded_with: VCR 6.2.0

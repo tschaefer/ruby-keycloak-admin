@@ -1,0 +1,100 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:8080/admin/realms/master/clients
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJtTlNCYUJUR3ZncUlub2ExLWdFS1NfQVhvUUZFOFVtZ3B3aVJrYmlKaG93In0.eyJleHAiOjE2OTkyODEzNDMsImlhdCI6MTY5OTI4MTI4MywianRpIjoiNzdiZGUzMzktNTAzMy00NmYxLWJhNGYtMjlhMzdlOWUyN2E4IiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3JlYWxtcy9tYXN0ZXIiLCJzdWIiOiJlZTg1ZDA0Ny03ZGE0LTRmN2QtOTdhYy1hYjdiM2VmODU4ODYiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJhZG1pbi1jbGkiLCJzZXNzaW9uX3N0YXRlIjoiMmJhMzMzYWEtZTNmZS00NGM5LThkNTEtNTVlODllZTM2ZDQ4IiwiYWNyIjoiMSIsInNjb3BlIjoicHJvZmlsZSBlbWFpbCIsInNpZCI6IjJiYTMzM2FhLWUzZmUtNDRjOS04ZDUxLTU1ZTg5ZWUzNmQ0OCIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwicHJlZmVycmVkX3VzZXJuYW1lIjoiYWRtaW4ifQ.P0StEXPJF5ij4Cnv9KW-GwMT5VhjK_BNNfD04M5M3oCxeROGxjAK8ZKPlzbI7zUW3pp8BF4QMQyrfPCOYj3y44YR4HqV8X_ILmyWEE5xD-wQ0SXbU2IqqPvzL9dvlbXZHYh78VuUUJ7yp8fbF2JJ3HMkGv1PxRkQ8jzbTcLbDTZcNs3_KxlHm_NIHm2rYFsiAPKBBadGj23SLESvBC5ZkHSnCFcvtEb8-oZ__Se74Ddbk-syF9J3RMCBWbe3vv_Txi-s_rWd3WTF7ikyFwBT5bIDOwBOv5GFvJPhB96VPi_vcjDDS6u_ZzOhGWJoHl7sxW4FnHgLUE_5uIpJwKHjvg
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Referrer-Policy:
+      - no-referrer
+      X-Frame-Options:
+      - SAMEORIGIN
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Cache-Control:
+      - no-cache
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '6759'
+    body:
+      encoding: UTF-8
+      string: '[{"id":"fe2a8a88-40be-4187-93d4-6daaf2c017a3","clientId":"account","name":"${client_account}","rootUrl":"${authBaseUrl}","baseUrl":"/realms/master/account/","surrogateAuthRequired":false,"enabled":true,"alwaysDisplayInConsole":false,"clientAuthenticatorType":"client-secret","redirectUris":["/realms/master/account/*"],"webOrigins":[],"notBefore":0,"bearerOnly":false,"consentRequired":false,"standardFlowEnabled":true,"implicitFlowEnabled":false,"directAccessGrantsEnabled":false,"serviceAccountsEnabled":false,"publicClient":true,"frontchannelLogout":false,"protocol":"openid-connect","attributes":{"post.logout.redirect.uris":"+"},"authenticationFlowBindingOverrides":{},"fullScopeAllowed":false,"nodeReRegistrationTimeout":0,"defaultClientScopes":["web-origins","acr","roles","profile","email"],"optionalClientScopes":["address","phone","offline_access","microprofile-jwt"],"access":{"view":true,"configure":true,"manage":true}},{"id":"ceceb1e2-1830-435f-852a-40df218306a6","clientId":"account-console","name":"${client_account-console}","rootUrl":"${authBaseUrl}","baseUrl":"/realms/master/account/","surrogateAuthRequired":false,"enabled":true,"alwaysDisplayInConsole":false,"clientAuthenticatorType":"client-secret","redirectUris":["/realms/master/account/*"],"webOrigins":[],"notBefore":0,"bearerOnly":false,"consentRequired":false,"standardFlowEnabled":true,"implicitFlowEnabled":false,"directAccessGrantsEnabled":false,"serviceAccountsEnabled":false,"publicClient":true,"frontchannelLogout":false,"protocol":"openid-connect","attributes":{"post.logout.redirect.uris":"+","pkce.code.challenge.method":"S256"},"authenticationFlowBindingOverrides":{},"fullScopeAllowed":false,"nodeReRegistrationTimeout":0,"protocolMappers":[{"id":"1a037912-0ee4-4cd6-9684-cf5a28ed2f5c","name":"audience
+        resolve","protocol":"openid-connect","protocolMapper":"oidc-audience-resolve-mapper","consentRequired":false,"config":{}}],"defaultClientScopes":["web-origins","acr","roles","profile","email"],"optionalClientScopes":["address","phone","offline_access","microprofile-jwt"],"access":{"view":true,"configure":true,"manage":true}},{"id":"6f097e24-39cf-4139-bc0b-5a0cdf6c99da","clientId":"acme-client","surrogateAuthRequired":false,"enabled":true,"alwaysDisplayInConsole":false,"clientAuthenticatorType":"client-secret","secret":"NaVH7niucZ40HOGeDGjehcl329FpcU7B","redirectUris":[],"webOrigins":[],"notBefore":0,"bearerOnly":false,"consentRequired":false,"standardFlowEnabled":true,"implicitFlowEnabled":false,"directAccessGrantsEnabled":false,"serviceAccountsEnabled":false,"publicClient":false,"frontchannelLogout":false,"protocol":"openid-connect","attributes":{"client.secret.creation.time":"1699281283"},"authenticationFlowBindingOverrides":{},"fullScopeAllowed":true,"nodeReRegistrationTimeout":-1,"defaultClientScopes":["web-origins","acr","roles","profile","email"],"optionalClientScopes":["address","phone","offline_access","microprofile-jwt"],"access":{"view":true,"configure":true,"manage":true}},{"id":"99671116-ba35-4a81-a900-5a8b9daa39a5","clientId":"admin-cli","name":"${client_admin-cli}","surrogateAuthRequired":false,"enabled":true,"alwaysDisplayInConsole":false,"clientAuthenticatorType":"client-secret","redirectUris":[],"webOrigins":[],"notBefore":0,"bearerOnly":false,"consentRequired":false,"standardFlowEnabled":false,"implicitFlowEnabled":false,"directAccessGrantsEnabled":true,"serviceAccountsEnabled":false,"publicClient":true,"frontchannelLogout":false,"protocol":"openid-connect","attributes":{},"authenticationFlowBindingOverrides":{},"fullScopeAllowed":false,"nodeReRegistrationTimeout":0,"defaultClientScopes":["web-origins","acr","roles","profile","email"],"optionalClientScopes":["address","phone","offline_access","microprofile-jwt"],"access":{"view":true,"configure":true,"manage":true}},{"id":"fa3fc92e-6614-43b5-b4e8-ccdd10fd4d3d","clientId":"broker","name":"${client_broker}","surrogateAuthRequired":false,"enabled":true,"alwaysDisplayInConsole":false,"clientAuthenticatorType":"client-secret","redirectUris":[],"webOrigins":[],"notBefore":0,"bearerOnly":true,"consentRequired":false,"standardFlowEnabled":true,"implicitFlowEnabled":false,"directAccessGrantsEnabled":false,"serviceAccountsEnabled":false,"publicClient":false,"frontchannelLogout":false,"protocol":"openid-connect","attributes":{},"authenticationFlowBindingOverrides":{},"fullScopeAllowed":false,"nodeReRegistrationTimeout":0,"defaultClientScopes":["web-origins","acr","roles","profile","email"],"optionalClientScopes":["address","phone","offline_access","microprofile-jwt"],"access":{"view":true,"configure":true,"manage":true}},{"id":"64fe3203-629f-446f-bf6d-3c8b325ff561","clientId":"master-realm","name":"master
+        Realm","surrogateAuthRequired":false,"enabled":true,"alwaysDisplayInConsole":false,"clientAuthenticatorType":"client-secret","redirectUris":[],"webOrigins":[],"notBefore":0,"bearerOnly":true,"consentRequired":false,"standardFlowEnabled":true,"implicitFlowEnabled":false,"directAccessGrantsEnabled":false,"serviceAccountsEnabled":false,"publicClient":false,"frontchannelLogout":false,"attributes":{},"authenticationFlowBindingOverrides":{},"fullScopeAllowed":false,"nodeReRegistrationTimeout":0,"defaultClientScopes":["web-origins","acr","roles","profile","email"],"optionalClientScopes":["address","phone","offline_access","microprofile-jwt"],"access":{"view":true,"configure":true,"manage":true}},{"id":"5f0c0069-5821-42d2-ae73-eb08896ab00b","clientId":"security-admin-console","name":"${client_security-admin-console}","rootUrl":"${authAdminUrl}","baseUrl":"/admin/master/console/","surrogateAuthRequired":false,"enabled":true,"alwaysDisplayInConsole":false,"clientAuthenticatorType":"client-secret","redirectUris":["/admin/master/console/*"],"webOrigins":["+"],"notBefore":0,"bearerOnly":false,"consentRequired":false,"standardFlowEnabled":true,"implicitFlowEnabled":false,"directAccessGrantsEnabled":false,"serviceAccountsEnabled":false,"publicClient":true,"frontchannelLogout":false,"protocol":"openid-connect","attributes":{"post.logout.redirect.uris":"+","pkce.code.challenge.method":"S256"},"authenticationFlowBindingOverrides":{},"fullScopeAllowed":false,"nodeReRegistrationTimeout":0,"protocolMappers":[{"id":"40844dc6-cbbf-4955-a652-4dd623f3cdcf","name":"locale","protocol":"openid-connect","protocolMapper":"oidc-usermodel-attribute-mapper","consentRequired":false,"config":{"userinfo.token.claim":"true","user.attribute":"locale","id.token.claim":"true","access.token.claim":"true","claim.name":"locale","jsonType.label":"String"}}],"defaultClientScopes":["web-origins","acr","roles","profile","email"],"optionalClientScopes":["address","phone","offline_access","microprofile-jwt"],"access":{"view":true,"configure":true,"manage":true}}]'
+  recorded_at: Mon, 06 Nov 2023 14:34:43 GMT
+- request:
+    method: put
+    uri: http://localhost:8080/admin/realms/master/clients/6f097e24-39cf-4139-bc0b-5a0cdf6c99da
+    body:
+      encoding: UTF-8
+      string: '{"invalid":true}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJtTlNCYUJUR3ZncUlub2ExLWdFS1NfQVhvUUZFOFVtZ3B3aVJrYmlKaG93In0.eyJleHAiOjE2OTkyODEzNDMsImlhdCI6MTY5OTI4MTI4MywianRpIjoiNzdiZGUzMzktNTAzMy00NmYxLWJhNGYtMjlhMzdlOWUyN2E4IiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3JlYWxtcy9tYXN0ZXIiLCJzdWIiOiJlZTg1ZDA0Ny03ZGE0LTRmN2QtOTdhYy1hYjdiM2VmODU4ODYiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJhZG1pbi1jbGkiLCJzZXNzaW9uX3N0YXRlIjoiMmJhMzMzYWEtZTNmZS00NGM5LThkNTEtNTVlODllZTM2ZDQ4IiwiYWNyIjoiMSIsInNjb3BlIjoicHJvZmlsZSBlbWFpbCIsInNpZCI6IjJiYTMzM2FhLWUzZmUtNDRjOS04ZDUxLTU1ZTg5ZWUzNmQ0OCIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwicHJlZmVycmVkX3VzZXJuYW1lIjoiYWRtaW4ifQ.P0StEXPJF5ij4Cnv9KW-GwMT5VhjK_BNNfD04M5M3oCxeROGxjAK8ZKPlzbI7zUW3pp8BF4QMQyrfPCOYj3y44YR4HqV8X_ILmyWEE5xD-wQ0SXbU2IqqPvzL9dvlbXZHYh78VuUUJ7yp8fbF2JJ3HMkGv1PxRkQ8jzbTcLbDTZcNs3_KxlHm_NIHm2rYFsiAPKBBadGj23SLESvBC5ZkHSnCFcvtEb8-oZ__Se74Ddbk-syF9J3RMCBWbe3vv_Txi-s_rWd3WTF7ikyFwBT5bIDOwBOv5GFvJPhB96VPi_vcjDDS6u_ZzOhGWJoHl7sxW4FnHgLUE_5uIpJwKHjvg
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Referrer-Policy:
+      - no-referrer
+      X-Frame-Options:
+      - SAMEORIGIN
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '1225'
+    body:
+      encoding: UTF-8
+      string: '{"error":"Unrecognized field \"invalid\" (class org.keycloak.representations.idm.ClientRepresentation),
+        not marked as ignorable (43 known properties: \"enabled\", \"clientAuthenticatorType\",
+        \"redirectUris\", \"clientId\", \"authenticationFlowBindingOverrides\", \"authorizationServicesEnabled\",
+        \"name\", \"implicitFlowEnabled\", \"registeredNodes\", \"nodeReRegistrationTimeout\",
+        \"publicClient\", \"attributes\", \"protocol\", \"webOrigins\", \"protocolMappers\",
+        \"id\", \"baseUrl\", \"surrogateAuthRequired\", \"adminUrl\", \"fullScopeAllowed\",
+        \"frontchannelLogout\", \"clientTemplate\", \"origin\", \"defaultClientScopes\",
+        \"directGrantsOnly\", \"rootUrl\", \"secret\", \"useTemplateMappers\", \"notBefore\",
+        \"useTemplateScope\", \"standardFlowEnabled\", \"description\", \"directAccessGrantsEnabled\",
+        \"alwaysDisplayInConsole\", \"useTemplateConfig\", \"serviceAccountsEnabled\",
+        \"optionalClientScopes\", \"consentRequired\", \"access\", \"bearerOnly\",
+        \"registrationAccessToken\", \"defaultRoles\", \"authorizationSettings\"])\n
+        at [Source: (io.quarkus.vertx.http.runtime.VertxInputStream); line: 1, column:
+        16] (through reference chain: org.keycloak.representations.idm.ClientRepresentation[\"invalid\"])"}'
+  recorded_at: Mon, 06 Nov 2023 14:34:43 GMT
+recorded_with: VCR 6.2.0
