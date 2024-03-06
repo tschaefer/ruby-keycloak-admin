@@ -2,6 +2,6 @@
 
 module Keycloak
   module Admin
-    VERSION = '22.0.4'
+    VERSION = '23.0.7'
   end
 end
