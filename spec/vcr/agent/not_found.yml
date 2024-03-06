@@ -20,34 +20,36 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Referrer-Policy:
-      - no-referrer
-      X-Frame-Options:
-      - SAMEORIGIN
-      Strict-Transport-Security:
-      - max-age=31536000; includeSubDomains
       Cache-Control:
       - no-store
-      X-Content-Type-Options:
-      - nosniff
+      Pragma:
+      - no-cache
       Set-Cookie:
+      - KC_AUTH_STATE=; Version=1; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Max-Age=0;
+        Path=/realms/master/
       - KC_RESTART=; Version=1; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Max-Age=0;
         Path=/realms/master/; HttpOnly
       - KEYCLOAK_LOCALE=; Version=1; Comment=Expiring cookie; Expires=Thu, 01-Jan-1970
         00:00:10 GMT; Max-Age=0; Path=/realms/master/; HttpOnly
-      Pragma:
-      - no-cache
-      X-Xss-Protection:
-      - 1; mode=block
-      Content-Type:
-      - application/json
       Content-Length:
       - '1818'
+      Content-Type:
+      - application/json
+      Referrer-Policy:
+      - no-referrer
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
     body:
       encoding: UTF-8
-      string: '{"access_token":"eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJtTlNCYUJUR3ZncUlub2ExLWdFS1NfQVhvUUZFOFVtZ3B3aVJrYmlKaG93In0.eyJleHAiOjE2OTkyODEzNDQsImlhdCI6MTY5OTI4MTI4NCwianRpIjoiYzRiYjZkNjItMTJkZi00ZjAyLWI1Y2EtYWVmMmIxZDM3MWE0IiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3JlYWxtcy9tYXN0ZXIiLCJzdWIiOiJlZTg1ZDA0Ny03ZGE0LTRmN2QtOTdhYy1hYjdiM2VmODU4ODYiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJhZG1pbi1jbGkiLCJzZXNzaW9uX3N0YXRlIjoiNjg5YTc1OTQtZmNmOS00MmRiLTg1ZmQtNmI0NmNmOTdiNWZkIiwiYWNyIjoiMSIsInNjb3BlIjoicHJvZmlsZSBlbWFpbCIsInNpZCI6IjY4OWE3NTk0LWZjZjktNDJkYi04NWZkLTZiNDZjZjk3YjVmZCIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwicHJlZmVycmVkX3VzZXJuYW1lIjoiYWRtaW4ifQ.Q0ncWZM0zr_568O3rhi2-zSgucYe36UK-Sb2J4aF9OLsXjgmGHMM3fbH8_3AEnpF-uqcuD7pqbNWdQp_TqjgJcimLU8GkL2YfC8J2HlUHDDrWznCRW_5g_TDqdhbTGy6cc-8RZLSEWn03MzzfHJ1WzFPiyfmYL12ejHmcz2VGh5tpn6bBMRUx9e9kmJuPcqnExznkS7loWjAKQRMwt0LJW8UzsmX7rocaaKCZa9HOxmW9tA9tqtdSucOr5k48wAgyxibA4_5VaoE_7n-gKHyZY4vsx7DV9O6QFt4rKzV2sh6c7sd-BWVvqogKNfXpMeKA6t47aY3r9HNPq-fRt-zJg","expires_in":60,"refresh_expires_in":1800,"refresh_token":"eyJhbGciOiJIUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICIwNDUxMTRkNC03YzEwLTRkZjItODUwYy01MzMyM2VlOGNhNzAifQ.eyJleHAiOjE2OTkyODMwODQsImlhdCI6MTY5OTI4MTI4NCwianRpIjoiNzY3NTNjNzEtMmRhNC00Y2FmLWI1OWYtNzMwZGY1ZTMxZDRiIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3JlYWxtcy9tYXN0ZXIiLCJhdWQiOiJodHRwOi8vbG9jYWxob3N0OjgwODAvcmVhbG1zL21hc3RlciIsInN1YiI6ImVlODVkMDQ3LTdkYTQtNGY3ZC05N2FjLWFiN2IzZWY4NTg4NiIsInR5cCI6IlJlZnJlc2giLCJhenAiOiJhZG1pbi1jbGkiLCJzZXNzaW9uX3N0YXRlIjoiNjg5YTc1OTQtZmNmOS00MmRiLTg1ZmQtNmI0NmNmOTdiNWZkIiwic2NvcGUiOiJwcm9maWxlIGVtYWlsIiwic2lkIjoiNjg5YTc1OTQtZmNmOS00MmRiLTg1ZmQtNmI0NmNmOTdiNWZkIn0.zz1c1jm2ck2lwralY7EY1zfhH5JdKaznpK2Q3rScPbs","token_type":"Bearer","not-before-policy":0,"session_state":"689a7594-fcf9-42db-85fd-6b46cf97b5fd","scope":"profile
-        email"}'
-  recorded_at: Mon, 06 Nov 2023 14:34:44 GMT
+      string: '{"access_token":"eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJrLWZ5aGM5R1MxNmZCN2diNDJKbS1IZk8xZTVISjd2czAtYm9hSWRNT3hrIn0.eyJleHAiOjE3MDk2MjA3MzQsImlhdCI6MTcwOTYyMDY3NCwianRpIjoiMDY0OTk4OGYtZThhYi00OTM1LTkzOTUtNDc4YmIwZjkzNTA0IiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3JlYWxtcy9tYXN0ZXIiLCJzdWIiOiI1ZTA0Mjg3MC01YmUyLTRkMjEtYjc0Ny1iNmIwOTU1ODc0MzkiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJhZG1pbi1jbGkiLCJzZXNzaW9uX3N0YXRlIjoiYzllYmE3M2ItY2E3NS00NDI5LWI3ZjItYWMyNzRhZTdlMTgzIiwiYWNyIjoiMSIsInNjb3BlIjoiZW1haWwgcHJvZmlsZSIsInNpZCI6ImM5ZWJhNzNiLWNhNzUtNDQyOS1iN2YyLWFjMjc0YWU3ZTE4MyIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwicHJlZmVycmVkX3VzZXJuYW1lIjoiYWRtaW4ifQ.DVfaujQZEVG5xOycVdkeOfM3iLM3NdHul-QRQNNXDZXELP50LMk2Rxt5zZ6J5wi21e2oaE39HMiH6mawGM20YjPrgpAT6NHMYGFnfzgAP5XAgZBNK4M6QV1VE7vMLHy0l9piO2IvHO3HqDqoKuJxASPwdVIoTd_ptWa3eIRx4TSBxEp7_VJDn124WshSFymcQPteyYvGqdsOVMGFP66ITTDp34nf_GX3rbjkzQFnc3MEweKOb2S29yg05Xqp4XazTmg3WFX7rRHIPjX7DIK8luw5Bc_x5sb09lMVrh3y6ewN7rxwIvQpPIzKY-GAuGGle9C4t3X28OJ8fFeBiqbcZw","expires_in":60,"refresh_expires_in":1800,"refresh_token":"eyJhbGciOiJIUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJmNmU4MGVjZC03NDFlLTQ5OGMtYWJmZC1lNzIyMGJhNGI3YzEifQ.eyJleHAiOjE3MDk2MjI0NzQsImlhdCI6MTcwOTYyMDY3NCwianRpIjoiYmQ3M2UwZGYtNjYyOS00NzQ1LWE1M2MtMzA4ZWJlZWI3MzliIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3JlYWxtcy9tYXN0ZXIiLCJhdWQiOiJodHRwOi8vbG9jYWxob3N0OjgwODAvcmVhbG1zL21hc3RlciIsInN1YiI6IjVlMDQyODcwLTViZTItNGQyMS1iNzQ3LWI2YjA5NTU4NzQzOSIsInR5cCI6IlJlZnJlc2giLCJhenAiOiJhZG1pbi1jbGkiLCJzZXNzaW9uX3N0YXRlIjoiYzllYmE3M2ItY2E3NS00NDI5LWI3ZjItYWMyNzRhZTdlMTgzIiwic2NvcGUiOiJlbWFpbCBwcm9maWxlIiwic2lkIjoiYzllYmE3M2ItY2E3NS00NDI5LWI3ZjItYWMyNzRhZTdlMTgzIn0.m6f6z41J7W8KCM_vnu_bvHQaGSJGPUz2J1EBNIbOH3U","token_type":"Bearer","not-before-policy":0,"session_state":"c9eba73b-ca75-4429-b7f2-ac274ae7e183","scope":"email
+        profile"}'
+  recorded_at: Tue, 05 Mar 2024 06:37:54 GMT
 - request:
     method: get
     uri: http://localhost:8080/admin/realms/master/invalid
@@ -60,7 +62,7 @@ http_interactions:
       Content-Type:
       - application/json
       Authorization:
-      - Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJtTlNCYUJUR3ZncUlub2ExLWdFS1NfQVhvUUZFOFVtZ3B3aVJrYmlKaG93In0.eyJleHAiOjE2OTkyODEzNDQsImlhdCI6MTY5OTI4MTI4NCwianRpIjoiYzRiYjZkNjItMTJkZi00ZjAyLWI1Y2EtYWVmMmIxZDM3MWE0IiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3JlYWxtcy9tYXN0ZXIiLCJzdWIiOiJlZTg1ZDA0Ny03ZGE0LTRmN2QtOTdhYy1hYjdiM2VmODU4ODYiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJhZG1pbi1jbGkiLCJzZXNzaW9uX3N0YXRlIjoiNjg5YTc1OTQtZmNmOS00MmRiLTg1ZmQtNmI0NmNmOTdiNWZkIiwiYWNyIjoiMSIsInNjb3BlIjoicHJvZmlsZSBlbWFpbCIsInNpZCI6IjY4OWE3NTk0LWZjZjktNDJkYi04NWZkLTZiNDZjZjk3YjVmZCIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwicHJlZmVycmVkX3VzZXJuYW1lIjoiYWRtaW4ifQ.Q0ncWZM0zr_568O3rhi2-zSgucYe36UK-Sb2J4aF9OLsXjgmGHMM3fbH8_3AEnpF-uqcuD7pqbNWdQp_TqjgJcimLU8GkL2YfC8J2HlUHDDrWznCRW_5g_TDqdhbTGy6cc-8RZLSEWn03MzzfHJ1WzFPiyfmYL12ejHmcz2VGh5tpn6bBMRUx9e9kmJuPcqnExznkS7loWjAKQRMwt0LJW8UzsmX7rocaaKCZa9HOxmW9tA9tqtdSucOr5k48wAgyxibA4_5VaoE_7n-gKHyZY4vsx7DV9O6QFt4rKzV2sh6c7sd-BWVvqogKNfXpMeKA6t47aY3r9HNPq-fRt-zJg
+      - Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJrLWZ5aGM5R1MxNmZCN2diNDJKbS1IZk8xZTVISjd2czAtYm9hSWRNT3hrIn0.eyJleHAiOjE3MDk2MjA3MzQsImlhdCI6MTcwOTYyMDY3NCwianRpIjoiMDY0OTk4OGYtZThhYi00OTM1LTkzOTUtNDc4YmIwZjkzNTA0IiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3JlYWxtcy9tYXN0ZXIiLCJzdWIiOiI1ZTA0Mjg3MC01YmUyLTRkMjEtYjc0Ny1iNmIwOTU1ODc0MzkiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJhZG1pbi1jbGkiLCJzZXNzaW9uX3N0YXRlIjoiYzllYmE3M2ItY2E3NS00NDI5LWI3ZjItYWMyNzRhZTdlMTgzIiwiYWNyIjoiMSIsInNjb3BlIjoiZW1haWwgcHJvZmlsZSIsInNpZCI6ImM5ZWJhNzNiLWNhNzUtNDQyOS1iN2YyLWFjMjc0YWU3ZTE4MyIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwicHJlZmVycmVkX3VzZXJuYW1lIjoiYWRtaW4ifQ.DVfaujQZEVG5xOycVdkeOfM3iLM3NdHul-QRQNNXDZXELP50LMk2Rxt5zZ6J5wi21e2oaE39HMiH6mawGM20YjPrgpAT6NHMYGFnfzgAP5XAgZBNK4M6QV1VE7vMLHy0l9piO2IvHO3HqDqoKuJxASPwdVIoTd_ptWa3eIRx4TSBxEp7_VJDn124WshSFymcQPteyYvGqdsOVMGFP66ITTDp34nf_GX3rbjkzQFnc3MEweKOb2S29yg05Xqp4XazTmg3WFX7rRHIPjX7DIK8luw5Bc_x5sb09lMVrh3y6ewN7rxwIvQpPIzKY-GAuGGle9C4t3X28OJ8fFeBiqbcZw
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       User-Agent:
@@ -70,22 +72,22 @@ http_interactions:
       code: 404
       message: Not Found
     headers:
+      Content-Length:
+      - '30'
+      Content-Type:
+      - application/json
       Referrer-Policy:
       - no-referrer
-      X-Frame-Options:
-      - SAMEORIGIN
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains
       X-Content-Type-Options:
       - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
       X-Xss-Protection:
       - 1; mode=block
-      Content-Type:
-      - application/json
-      Content-Length:
-      - '30'
     body:
       encoding: UTF-8
       string: '{"error":"HTTP 404 Not Found"}'
-  recorded_at: Mon, 06 Nov 2023 14:34:44 GMT
+  recorded_at: Tue, 05 Mar 2024 06:37:54 GMT
 recorded_with: VCR 6.2.0

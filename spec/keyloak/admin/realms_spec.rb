@@ -36,7 +36,7 @@ RSpec.describe Keycloak::Admin::Realms, order: :defined do # rubocop:disable RSp
         expect do
           described_class.create(realm: 'acme-corp-realm', invalid: true)
           # expected Keycloak::Admin::BadRequestError
-        end.to raise_error Keycloak::Admin::InternalServerStandardError
+        end.to raise_error Keycloak::Admin::InternalServerError
       end
     end
 

@@ -12,7 +12,7 @@ module Keycloak
       headers 'Accept' => 'application/json', 'Content-Type' => 'application/json'
       debug_output $stdout if ENV['KEYCLOAK_ADMIN_DEBUG']
 
-      attr_accessor :base_url, :username, :password, :realm, :grant_type
+      attr_accessor :base_url, :username, :password, :realm, :grant_type, :always_terminate
 
       def initialize
         @base_url = 'http://localhost:8080'
@@ -20,10 +20,11 @@ module Keycloak
         @username = 'nil'
         @password = 'nil'
         @grant_type = 'password'
+        @always_terminate = false
       end
 
       def logout
-        terminate_session(destroy: true)
+        terminate_session
       end
 
       %i[get post put delete].each do |method|
@@ -33,7 +34,7 @@ module Keycloak
       end
 
       def request(method, path, params: {})
-        create_session
+        refresh_session || create_session
 
         params[:headers] ||= {}
         params[:headers][:Authorization] = "Bearer #{@session['access_token']}"
@@ -45,7 +46,7 @@ module Keycloak
           headers: params[:headers]
         )
 
-        terminate_session
+        terminate_session if @always_terminate
 
         Keycloak::Admin.raise_error(response) if !response.code.between?(200, 299)
 
@@ -55,7 +56,7 @@ module Keycloak
       private
 
       def create_session
-        return true if !session_expired?
+        return false if !session_expired?
 
         response = self.class.post(
           "#{@base_url}/realms/master/protocol/openid-connect/token",
@@ -75,9 +76,31 @@ module Keycloak
         true
       end
 
-      def terminate_session(destroy: false)
-        return true if !session_running?
-        return true if !refresh_expired? && !destroy
+      def refresh_session
+        return false if !session_running?
+        return false if refresh_expired?
+
+        response = self.class.post(
+          "#{@base_url}/realms/master/protocol/openid-connect/token",
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: {
+            grant_type: 'refresh_token',
+            client_id: 'admin-cli',
+            refresh_token: @session['refresh_token']
+          }
+        )
+
+        return false if response.code.eql?(400)
+        return Keycloak::Admin.raise_error(response) if !response.code.between?(200, 299)
+
+        store_session(response)
+
+        true
+      end
+
+      def terminate_session
+        return false if !session_running?
+        return false if refresh_expired?
 
         response = self.class.post(
           "#{@base_url}/realms/master/protocol/openid-connect/logout",

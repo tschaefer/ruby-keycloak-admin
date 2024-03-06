@@ -1,6 +1,49 @@
 ---
 http_interactions:
 - request:
+    method: post
+    uri: http://localhost:8080/realms/master/protocol/openid-connect/token
+    body:
+      encoding: UTF-8
+      string: grant_type=refresh_token&client_id=admin-cli&refresh_token=eyJhbGciOiJIUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJmNmU4MGVjZC03NDFlLTQ5OGMtYWJmZC1lNzIyMGJhNGI3YzEifQ.eyJleHAiOjE3MDk2MjI0NzQsImlhdCI6MTcwOTYyMDY3NCwianRpIjoiODkwMTZhMTAtMzg2Ny00MGVlLWJhNDgtNDRkYzM4ZGEwMWY2IiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3JlYWxtcy9tYXN0ZXIiLCJhdWQiOiJodHRwOi8vbG9jYWxob3N0OjgwODAvcmVhbG1zL21hc3RlciIsInN1YiI6IjVlMDQyODcwLTViZTItNGQyMS1iNzQ3LWI2YjA5NTU4NzQzOSIsInR5cCI6IlJlZnJlc2giLCJhenAiOiJhZG1pbi1jbGkiLCJzZXNzaW9uX3N0YXRlIjoiODZkMjNkM2UtYzJiMy00YTliLWIxM2MtNWExN2Y1YmJmM2EyIiwic2NvcGUiOiJlbWFpbCBwcm9maWxlIiwic2lkIjoiODZkMjNkM2UtYzJiMy00YTliLWIxM2MtNWExN2Y1YmJmM2EyIn0.WcJ6MAjxP8OzlD8BRfnrDR1-lm7hq4zerGfx94w3sQY
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-store
+      Pragma:
+      - no-cache
+      Content-Length:
+      - '1818'
+      Content-Type:
+      - application/json
+      Referrer-Policy:
+      - no-referrer
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+    body:
+      encoding: UTF-8
+      string: '{"access_token":"eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJrLWZ5aGM5R1MxNmZCN2diNDJKbS1IZk8xZTVISjd2czAtYm9hSWRNT3hrIn0.eyJleHAiOjE3MDk2MjA3MzQsImlhdCI6MTcwOTYyMDY3NCwianRpIjoiY2NmMGMyNjMtMDYyMy00MWE3LTg4NjMtMTZhMDk3YmYxMzBlIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3JlYWxtcy9tYXN0ZXIiLCJzdWIiOiI1ZTA0Mjg3MC01YmUyLTRkMjEtYjc0Ny1iNmIwOTU1ODc0MzkiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJhZG1pbi1jbGkiLCJzZXNzaW9uX3N0YXRlIjoiODZkMjNkM2UtYzJiMy00YTliLWIxM2MtNWExN2Y1YmJmM2EyIiwiYWNyIjoiMSIsInNjb3BlIjoiZW1haWwgcHJvZmlsZSIsInNpZCI6Ijg2ZDIzZDNlLWMyYjMtNGE5Yi1iMTNjLTVhMTdmNWJiZjNhMiIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwicHJlZmVycmVkX3VzZXJuYW1lIjoiYWRtaW4ifQ.NYsfLJT9rkByISysrByaI_6uZyzvmOJDY-2p3FIIlD08esvLnipMHWd6ZkL-DaABPRdV4GGttW7AWu-WMzZjTirVNE_KiN7bfkzV53GWsQPXEPMBz3XqicFcgxS2sExlAxhpV3H2diFVHR4au_srH38e2p02V1Je7zdd4G7blxMsE1pCeKPrQOddeUMGdFyDArc8QWBPe1fqeLT7AbCqD1BqQ5E7u1TDy7fuc2iNHc6ERe9PL0bcZozVrSYQfkXm_O9g1GKRvWpDsa0CsPgt8lVIx2NuWCMKdcJb2PPNiBYM_Lj9q8dmjybpgm6RWhI69CECvUmOMMJs0281JKNnaA","expires_in":60,"refresh_expires_in":1800,"refresh_token":"eyJhbGciOiJIUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJmNmU4MGVjZC03NDFlLTQ5OGMtYWJmZC1lNzIyMGJhNGI3YzEifQ.eyJleHAiOjE3MDk2MjI0NzQsImlhdCI6MTcwOTYyMDY3NCwianRpIjoiMmFjYjQ3ZjgtMzZmNC00MzE3LWEyYTItYzQ3MmU1ZWEzMGE4IiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3JlYWxtcy9tYXN0ZXIiLCJhdWQiOiJodHRwOi8vbG9jYWxob3N0OjgwODAvcmVhbG1zL21hc3RlciIsInN1YiI6IjVlMDQyODcwLTViZTItNGQyMS1iNzQ3LWI2YjA5NTU4NzQzOSIsInR5cCI6IlJlZnJlc2giLCJhenAiOiJhZG1pbi1jbGkiLCJzZXNzaW9uX3N0YXRlIjoiODZkMjNkM2UtYzJiMy00YTliLWIxM2MtNWExN2Y1YmJmM2EyIiwic2NvcGUiOiJlbWFpbCBwcm9maWxlIiwic2lkIjoiODZkMjNkM2UtYzJiMy00YTliLWIxM2MtNWExN2Y1YmJmM2EyIn0.hT7B4U6x0ds4MejbZwYi0LQ5jAItc9LvO4_3kP1dVQk","token_type":"Bearer","not-before-policy":0,"session_state":"86d23d3e-c2b3-4a9b-b13c-5a17f5bbf3a2","scope":"email
+        profile"}'
+  recorded_at: Tue, 05 Mar 2024 06:37:54 GMT
+- request:
     method: get
     uri: http://localhost:8080//admin/realms
     body:
@@ -12,7 +55,7 @@ http_interactions:
       Content-Type:
       - application/json
       Authorization:
-      - Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJtTlNCYUJUR3ZncUlub2ExLWdFS1NfQVhvUUZFOFVtZ3B3aVJrYmlKaG93In0.eyJleHAiOjE2OTkyODEzNDIsImlhdCI6MTY5OTI4MTI4MiwianRpIjoiYmYzMjY5NzQtMjM1NC00ODE2LTkzZGItNTQ0Yjk0MTg2ZDdhIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3JlYWxtcy9tYXN0ZXIiLCJzdWIiOiJlZTg1ZDA0Ny03ZGE0LTRmN2QtOTdhYy1hYjdiM2VmODU4ODYiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJhZG1pbi1jbGkiLCJzZXNzaW9uX3N0YXRlIjoiNmIzNWM5ZTMtZDk0Zi00ZTFlLWEwNzItNWE3MDJlMTJjYmE2IiwiYWNyIjoiMSIsInNjb3BlIjoicHJvZmlsZSBlbWFpbCIsInNpZCI6IjZiMzVjOWUzLWQ5NGYtNGUxZS1hMDcyLTVhNzAyZTEyY2JhNiIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwicHJlZmVycmVkX3VzZXJuYW1lIjoiYWRtaW4ifQ.Jl3JrBueoft3JX0iaPEZqpIUy0EUrHAGHib7XYyn6tFsP8nMd9ivIBgeoF7KBldrgz_bzBTxjVf1RguX2RGJNkjPKzUOJTyHVFsDUSSOPGn7rHLMl-dFcFfc6JAiQ8heks7lDn8KafV0Qz8BCfYbSIhtpPrYHD2OBEQBYhAkNv-V_FdPRu2FAdLpgLtaGX6T2U1QSKVGPfY2AEjZlXgZRD3REiqxvGwTu6p4gLEsjl0cL_5CpKddRF73IqSF9ySuXmCgOV-2KFYgepeqO2kVgjqRdmuE1gCMpZYNu9vDdsU5Zyale6nCE7BQI5QhUKEXVRxOnvDsQuPOFHC9FdDCcw
+      - Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJrLWZ5aGM5R1MxNmZCN2diNDJKbS1IZk8xZTVISjd2czAtYm9hSWRNT3hrIn0.eyJleHAiOjE3MDk2MjA3MzQsImlhdCI6MTcwOTYyMDY3NCwianRpIjoiY2NmMGMyNjMtMDYyMy00MWE3LTg4NjMtMTZhMDk3YmYxMzBlIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3JlYWxtcy9tYXN0ZXIiLCJzdWIiOiI1ZTA0Mjg3MC01YmUyLTRkMjEtYjc0Ny1iNmIwOTU1ODc0MzkiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJhZG1pbi1jbGkiLCJzZXNzaW9uX3N0YXRlIjoiODZkMjNkM2UtYzJiMy00YTliLWIxM2MtNWExN2Y1YmJmM2EyIiwiYWNyIjoiMSIsInNjb3BlIjoiZW1haWwgcHJvZmlsZSIsInNpZCI6Ijg2ZDIzZDNlLWMyYjMtNGE5Yi1iMTNjLTVhMTdmNWJiZjNhMiIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwicHJlZmVycmVkX3VzZXJuYW1lIjoiYWRtaW4ifQ.NYsfLJT9rkByISysrByaI_6uZyzvmOJDY-2p3FIIlD08esvLnipMHWd6ZkL-DaABPRdV4GGttW7AWu-WMzZjTirVNE_KiN7bfkzV53GWsQPXEPMBz3XqicFcgxS2sExlAxhpV3H2diFVHR4au_srH38e2p02V1Je7zdd4G7blxMsE1pCeKPrQOddeUMGdFyDArc8QWBPe1fqeLT7AbCqD1BqQ5E7u1TDy7fuc2iNHc6ERe9PL0bcZozVrSYQfkXm_O9g1GKRvWpDsa0CsPgt8lVIx2NuWCMKdcJb2PPNiBYM_Lj9q8dmjybpgm6RWhI69CECvUmOMMJs0281JKNnaA
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       User-Agent:
@@ -22,33 +65,33 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Referrer-Policy:
-      - no-referrer
-      X-Frame-Options:
-      - SAMEORIGIN
-      Strict-Transport-Security:
-      - max-age=31536000; includeSubDomains
+      Content-Length:
+      - '4229'
       Cache-Control:
       - no-cache
+      Content-Type:
+      - application/json;charset=UTF-8
+      Referrer-Policy:
+      - no-referrer
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
       X-Content-Type-Options:
       - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
       X-Xss-Protection:
       - 1; mode=block
-      Content-Type:
-      - application/json
-      Content-Length:
-      - '4153'
     body:
       encoding: UTF-8
-      string: '[{"id":"763409f9-9635-4a23-be9c-faa23e5a1e91","realm":"master","displayName":"Keycloak","displayNameHtml":"<div
-        class=\"kc-logo-text\"><span>Keycloak</span></div>","notBefore":0,"defaultSignatureAlgorithm":"RS256","revokeRefreshToken":false,"refreshTokenMaxReuse":0,"accessTokenLifespan":60,"accessTokenLifespanForImplicitFlow":900,"ssoSessionIdleTimeout":1800,"ssoSessionMaxLifespan":36000,"ssoSessionIdleTimeoutRememberMe":0,"ssoSessionMaxLifespanRememberMe":0,"offlineSessionIdleTimeout":2592000,"offlineSessionMaxLifespanEnabled":false,"offlineSessionMaxLifespan":5184000,"clientSessionIdleTimeout":0,"clientSessionMaxLifespan":0,"clientOfflineSessionIdleTimeout":0,"clientOfflineSessionMaxLifespan":0,"accessCodeLifespan":60,"accessCodeLifespanUserAction":300,"accessCodeLifespanLogin":1800,"actionTokenGeneratedByAdminLifespan":43200,"actionTokenGeneratedByUserLifespan":300,"oauth2DeviceCodeLifespan":600,"oauth2DevicePollingInterval":5,"enabled":true,"sslRequired":"external","registrationAllowed":false,"registrationEmailAsUsername":false,"rememberMe":false,"verifyEmail":false,"loginWithEmailAllowed":true,"duplicateEmailsAllowed":false,"resetPasswordAllowed":false,"editUsernameAllowed":false,"bruteForceProtected":false,"permanentLockout":false,"maxFailureWaitSeconds":900,"minimumQuickLoginWaitSeconds":60,"waitIncrementSeconds":60,"quickLoginCheckMilliSeconds":1000,"maxDeltaTimeSeconds":43200,"failureFactor":30,"defaultRole":{"id":"3aafd6ed-2f45-4bb9-a363-159997f79921","name":"default-roles-master","description":"${role_default-roles}","composite":true,"clientRole":false,"containerId":"763409f9-9635-4a23-be9c-faa23e5a1e91"},"requiredCredentials":["password"],"otpPolicyType":"totp","otpPolicyAlgorithm":"HmacSHA1","otpPolicyInitialCounter":0,"otpPolicyDigits":6,"otpPolicyLookAheadWindow":1,"otpPolicyPeriod":30,"otpPolicyCodeReusable":false,"otpSupportedApplications":["totpAppFreeOTPName","totpAppMicrosoftAuthenticatorName","totpAppGoogleName"],"webAuthnPolicyRpEntityName":"keycloak","webAuthnPolicySignatureAlgorithms":["ES256"],"webAuthnPolicyRpId":"","webAuthnPolicyAttestationConveyancePreference":"not
+      string: '[{"id":"547e4965-e5b6-4811-b16d-848f78a71a20","realm":"master","displayName":"Keycloak","displayNameHtml":"<div
+        class=\"kc-logo-text\"><span>Keycloak</span></div>","notBefore":0,"defaultSignatureAlgorithm":"RS256","revokeRefreshToken":false,"refreshTokenMaxReuse":0,"accessTokenLifespan":60,"accessTokenLifespanForImplicitFlow":900,"ssoSessionIdleTimeout":1800,"ssoSessionMaxLifespan":36000,"ssoSessionIdleTimeoutRememberMe":0,"ssoSessionMaxLifespanRememberMe":0,"offlineSessionIdleTimeout":2592000,"offlineSessionMaxLifespanEnabled":false,"offlineSessionMaxLifespan":5184000,"clientSessionIdleTimeout":0,"clientSessionMaxLifespan":0,"clientOfflineSessionIdleTimeout":0,"clientOfflineSessionMaxLifespan":0,"accessCodeLifespan":60,"accessCodeLifespanUserAction":300,"accessCodeLifespanLogin":1800,"actionTokenGeneratedByAdminLifespan":43200,"actionTokenGeneratedByUserLifespan":300,"oauth2DeviceCodeLifespan":600,"oauth2DevicePollingInterval":5,"enabled":true,"sslRequired":"external","registrationAllowed":false,"registrationEmailAsUsername":false,"rememberMe":false,"verifyEmail":false,"loginWithEmailAllowed":true,"duplicateEmailsAllowed":false,"resetPasswordAllowed":false,"editUsernameAllowed":false,"bruteForceProtected":false,"permanentLockout":false,"maxFailureWaitSeconds":900,"minimumQuickLoginWaitSeconds":60,"waitIncrementSeconds":60,"quickLoginCheckMilliSeconds":1000,"maxDeltaTimeSeconds":43200,"failureFactor":30,"defaultRole":{"id":"c2b77e59-d7ff-4f23-963a-cf72765d2233","name":"default-roles-master","description":"${role_default-roles}","composite":true,"clientRole":false,"containerId":"547e4965-e5b6-4811-b16d-848f78a71a20"},"requiredCredentials":["password"],"otpPolicyType":"totp","otpPolicyAlgorithm":"HmacSHA1","otpPolicyInitialCounter":0,"otpPolicyDigits":6,"otpPolicyLookAheadWindow":1,"otpPolicyPeriod":30,"otpPolicyCodeReusable":false,"otpSupportedApplications":["totpAppFreeOTPName","totpAppGoogleName","totpAppMicrosoftAuthenticatorName"],"webAuthnPolicyRpEntityName":"keycloak","webAuthnPolicySignatureAlgorithms":["ES256"],"webAuthnPolicyRpId":"","webAuthnPolicyAttestationConveyancePreference":"not
         specified","webAuthnPolicyAuthenticatorAttachment":"not specified","webAuthnPolicyRequireResidentKey":"not
-        specified","webAuthnPolicyUserVerificationRequirement":"not specified","webAuthnPolicyCreateTimeout":0,"webAuthnPolicyAvoidSameAuthenticatorRegister":false,"webAuthnPolicyAcceptableAaguids":[],"webAuthnPolicyPasswordlessRpEntityName":"keycloak","webAuthnPolicyPasswordlessSignatureAlgorithms":["ES256"],"webAuthnPolicyPasswordlessRpId":"","webAuthnPolicyPasswordlessAttestationConveyancePreference":"not
+        specified","webAuthnPolicyUserVerificationRequirement":"not specified","webAuthnPolicyCreateTimeout":0,"webAuthnPolicyAvoidSameAuthenticatorRegister":false,"webAuthnPolicyAcceptableAaguids":[],"webAuthnPolicyExtraOrigins":[],"webAuthnPolicyPasswordlessRpEntityName":"keycloak","webAuthnPolicyPasswordlessSignatureAlgorithms":["ES256"],"webAuthnPolicyPasswordlessRpId":"","webAuthnPolicyPasswordlessAttestationConveyancePreference":"not
         specified","webAuthnPolicyPasswordlessAuthenticatorAttachment":"not specified","webAuthnPolicyPasswordlessRequireResidentKey":"not
-        specified","webAuthnPolicyPasswordlessUserVerificationRequirement":"not specified","webAuthnPolicyPasswordlessCreateTimeout":0,"webAuthnPolicyPasswordlessAvoidSameAuthenticatorRegister":false,"webAuthnPolicyPasswordlessAcceptableAaguids":[],"browserSecurityHeaders":{"contentSecurityPolicyReportOnly":"","xContentTypeOptions":"nosniff","referrerPolicy":"no-referrer","xRobotsTag":"none","xFrameOptions":"SAMEORIGIN","xXSSProtection":"1;
+        specified","webAuthnPolicyPasswordlessUserVerificationRequirement":"not specified","webAuthnPolicyPasswordlessCreateTimeout":0,"webAuthnPolicyPasswordlessAvoidSameAuthenticatorRegister":false,"webAuthnPolicyPasswordlessAcceptableAaguids":[],"webAuthnPolicyPasswordlessExtraOrigins":[],"browserSecurityHeaders":{"contentSecurityPolicyReportOnly":"","xContentTypeOptions":"nosniff","referrerPolicy":"no-referrer","xRobotsTag":"none","xFrameOptions":"SAMEORIGIN","xXSSProtection":"1;
         mode=block","contentSecurityPolicy":"frame-src ''self''; frame-ancestors ''self'';
         object-src ''none'';","strictTransportSecurity":"max-age=31536000; includeSubDomains"},"smtpServer":{},"eventsEnabled":false,"eventsListeners":["jboss-logging"],"enabledEventTypes":[],"adminEventsEnabled":false,"adminEventsDetailsEnabled":false,"identityProviders":[],"identityProviderMappers":[],"internationalizationEnabled":false,"supportedLocales":[],"browserFlow":"browser","registrationFlow":"registration","directGrantFlow":"direct
         grant","resetCredentialsFlow":"reset credentials","clientAuthenticationFlow":"clients","dockerAuthenticationFlow":"docker
         auth","attributes":{"cibaBackchannelTokenDeliveryMode":"poll","cibaExpiresIn":"120","cibaAuthRequestedUserHint":"login_hint","parRequestUriLifespan":"60","cibaInterval":"5","realmReusableOtpCode":"false"},"userManagedAccessAllowed":false,"clientProfiles":{"profiles":[]},"clientPolicies":{"policies":[]}}]'
-  recorded_at: Mon, 06 Nov 2023 14:34:43 GMT
+  recorded_at: Tue, 05 Mar 2024 06:37:54 GMT
 recorded_with: VCR 6.2.0
