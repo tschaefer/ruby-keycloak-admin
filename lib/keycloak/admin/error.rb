@@ -9,9 +9,10 @@ module Keycloak
     class ForbiddenError < StandardError; end # :nodoc:
     class BadRequestError < StandardError; end # :nodoc:
     class ConflictError < StandardError; end # :nodoc:
-    class InternalServerStandardError < StandardError; end # :nodoc:
+    class InternalServerError < StandardError; end # :nodoc:
     class ServiceUnavailableError < StandardError; end # :nodoc:
     class MethodNotAllowedError < StandardError; end # :nodoc:
+    class BadGatewayError < StandardError; end # :nodoc:
 
     class << self
       def raise_error(response)
@@ -22,13 +23,29 @@ module Keycloak
           404 => NotFoundError,
           405 => MethodNotAllowedError,
           409 => ConflictError,
-          500 => InternalServerStandardError,
+          500 => InternalServerError,
+          502 => BadGatewayError,
           503 => ServiceUnavailableError
         }
         error_class = error_classes[response.code] || StandardError
-        error_message = response.parsed_response['errorMessage'] || 'Unknown error'
 
-        raise error_class, error_message
+        raise error_class, error_message(response)
+      end
+
+      private
+
+      def error_message(response)
+        parsed_response = response.parsed_response
+
+        return parsed_response if response.parsed_response.is_a?(String)
+
+        if response.parsed_response.is_a?(Hash)
+          return parsed_response['errorMessage'] ||
+                 parsed_response['error'] ||
+                 'Unknown error'
+        end
+
+        nil
       end
     end
   end

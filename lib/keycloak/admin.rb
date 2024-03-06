@@ -95,6 +95,24 @@ module Keycloak
 
         Keycloak::Admin::Groups
       end
+
+      ##
+      # Verify if the Keycloak server is ready.
+      #
+      # Beware, method returns +nil+ if the server does not respond (404 not
+      # found) to health checks.
+      def ready?
+        configured!
+
+        begin
+          @agent.head('health/ready')
+          true
+        rescue Keycloak::Admin::NotFoundError
+          nil
+        rescue Keycloak::Admin::ServiceUnavailableError
+          false
+        end
+      end
     end
   end
 end

@@ -27,7 +27,7 @@ module Keycloak
         terminate_session
       end
 
-      %i[get post put delete].each do |method|
+      %i[get post put delete head].each do |method|
         define_method method do |path, params: {}|
           request(method, path, params:)
         end
