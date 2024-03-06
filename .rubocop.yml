@@ -25,3 +25,6 @@ RSpec/ExampleLength:
     - 'array'
     - 'hash'
     - 'heredoc'
+
+RSpec/AnyInstance:
+  Enabled: false
