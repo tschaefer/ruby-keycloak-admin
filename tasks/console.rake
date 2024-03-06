@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
-$LOAD_PATH.unshift "#{File.dirname(__FILE__)}/lib"
+ROOT = "#{File.dirname(__FILE__)}/..".freeze
+
+$LOAD_PATH.unshift "#{ROOT}/lib"
 
 def silent
   original_stdout = $stdout.clone
@@ -15,10 +17,9 @@ end
 
 def reload!(print: true)
   puts 'Reloading...' if print
-  root_dir = File.expand_path(__dir__)
-  reload_dirs = %w[lib]
-  reload_dirs.each do |dir|
-    Dir.glob("#{root_dir}/#{dir}/**/*.rb").each { |f| silent { load(f) } }
+  dirs = %w[lib]
+  dirs.each do |dir|
+    Dir.glob("#{ROOT}/#{dir}/**/*.rb").each { |f| silent { load(f) } }
   end
 
   true
@@ -27,7 +28,6 @@ end
 desc 'Start a console session with Hosts loaded'
 task :console do
   require 'pry'
-  require 'pry-byebug'
   require 'pry-doc'
   require 'pry-theme'
   require 'keycloak/admin'
