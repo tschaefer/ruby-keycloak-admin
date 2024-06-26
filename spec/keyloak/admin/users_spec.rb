@@ -165,7 +165,7 @@ RSpec.describe Keycloak::Admin::Users, order: :defined do # rubocop:disable RSpe
       let(:id) { described_class.all.first['id'] }
 
       it 'returns a user' do
-        expect(described_class.find_by_id(id).to_h).to include username: 'admin'
+        expect(described_class.find_by_id(id)).to include username: 'admin'
       end
     end
   end

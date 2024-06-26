@@ -45,7 +45,7 @@ module Keycloak
             objects << @agent.get("#{resource}/#{id}/members?first=#{first}&max=#{MAX_ENTRIES}")
           end
 
-          objects.flatten.map { |object| to_struct(object) }
+          objects.flatten.map { |object| mash(object) }
         end
 
         ##

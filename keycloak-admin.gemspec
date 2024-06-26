@@ -34,5 +34,6 @@ Gem::Specification.new do |spec|
 
   spec.post_install_message = 'All your Keycloak are belong to us!'
 
+  spec.add_dependency 'hashie', '~> 5.0.0'
   spec.add_dependency 'httparty', '~> 0.21.0'
 end

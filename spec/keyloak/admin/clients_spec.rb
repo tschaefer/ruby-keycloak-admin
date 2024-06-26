@@ -76,7 +76,7 @@ RSpec.describe Keycloak::Admin::Clients, order: :defined do # rubocop:disable RS
         result = described_class.find_by(clientId: 'acme-client')
         expect(result).to be_an(Array)
         expect(result.size).to be 1
-        expect(result.first.to_h).to include client
+        expect(result.first).to include client
       end
     end
   end
@@ -95,7 +95,7 @@ RSpec.describe Keycloak::Admin::Clients, order: :defined do # rubocop:disable RS
       let(:id) { described_class.all[2]['id'] }
 
       it 'returns a client' do
-        expect(described_class.find_by_id(id).to_h).to include client
+        expect(described_class.find_by_id(id)).to include client
       end
     end
   end
