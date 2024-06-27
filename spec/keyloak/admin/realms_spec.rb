@@ -77,7 +77,7 @@ RSpec.describe Keycloak::Admin::Realms, order: :defined do # rubocop:disable RSp
         result = described_class.find_by(realm: 'acme-corp-realm')
         expect(result).to be_an(Array)
         expect(result.size).to be 1
-        expect(result.first.to_h).to include realm
+        expect(result.first).to include realm
       end
     end
   end
@@ -95,7 +95,7 @@ RSpec.describe Keycloak::Admin::Realms, order: :defined do # rubocop:disable RSp
       let(:track) { 'find_by_name/valid' }
 
       it 'returns a client' do
-        expect(described_class.find_by_name('acme-corp-realm').to_h).to include realm
+        expect(described_class.find_by_name('acme-corp-realm')).to include realm
       end
     end
   end

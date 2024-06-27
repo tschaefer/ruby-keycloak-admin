@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require 'hashie'
+
 module Keycloak
   module Admin
     ##
@@ -20,7 +22,7 @@ module Keycloak
       def all
         objects = @agent.get(resource)
 
-        objects.map { |object| to_struct(object) }
+        objects.map { |object| mash(object) }
       end
 
       ##
@@ -46,8 +48,7 @@ module Keycloak
 
         lookup.each do |key, value|
           objects = objects.select do |object|
-            object.to_h.key?(key.to_sym) &&
-              object.to_h[key.to_sym].match?(value)
+            match_value?(object, key, value)
           end
           break if !objects
         end
@@ -61,7 +62,7 @@ module Keycloak
       def find_by_id(id)
         object = @agent.get("#{resource}/#{id}")
 
-        to_struct(object)
+        mash(object)
       end
       alias get find_by_id
 
@@ -80,9 +81,22 @@ module Keycloak
         raise NotImplementedError
       end
 
-      def to_struct(object)
-        object.transform_keys!(&:to_sym)
-        Struct.new(*object.keys).new(*object.values)
+      def match_value?(object, key, value)
+        return false if !object.key?(key)
+
+        if value.is_a?(String)
+          object[key].match?(value)
+        else
+          object[key] == value
+        end
+      end
+
+      def mash(object)
+        if object.is_a?(Array)
+          object.map { |item| Hashie::Mash.new(item) }
+        else
+          Hashie::Mash.new(object)
+        end
       end
     end
   end

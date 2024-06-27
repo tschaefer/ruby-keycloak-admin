@@ -47,7 +47,7 @@ module Keycloak
             objects << @agent.get("#{resource}/#{id}/groups?first=#{first}&max=#{MAX_ENTRIES}")
           end
 
-          objects.flatten.map { |object| to_struct(object) }
+          objects.flatten.map { |object| mash(object) }
         end
 
         ##
@@ -73,7 +73,7 @@ module Keycloak
         def sessions(id)
           objects = @agent.get("#{resource}/#{id}/sessions")
 
-          objects.map { |object| to_struct(object) }
+          objects.map { |object| mash(object) }
         end
 
         private

@@ -76,7 +76,7 @@ RSpec.describe Keycloak::Admin::Groups, order: :defined do # rubocop:disable RSp
         result = described_class.find_by(path: '/acme-corp')
         expect(result).to be_an(Array)
         expect(result.size).to be 1
-        expect(result.first.to_h).to include group
+        expect(result.first).to include group
       end
     end
   end
@@ -95,7 +95,7 @@ RSpec.describe Keycloak::Admin::Groups, order: :defined do # rubocop:disable RSp
       let(:id) { described_class.all.first['id'] }
 
       it 'returns a group' do
-        expect(described_class.find_by_id(id).to_h).to include group
+        expect(described_class.find_by_id(id)).to include group
       end
     end
   end
