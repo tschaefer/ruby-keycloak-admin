@@ -23,6 +23,13 @@ if ENV['COVERAGE']
   SimpleCov.start
 end
 
+# Load pry debugging modules.
+%w[pry-doc pry-byebug pry-rescue].each do |mod|
+  require mod
+rescue LoadError
+  # noop
+end
+
 RSpec.configure do |config|
   # rspec-expectations config goes here. You can use an alternate
   # assertion/expectation library such as wrong or the stdlib/minitest
