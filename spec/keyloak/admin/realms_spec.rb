@@ -5,7 +5,7 @@ require 'spec_helper'
 require 'keycloak/admin/agent'
 require 'keycloak/admin/realms'
 
-RSpec.describe Keycloak::Admin::Realms, order: :defined do # rubocop:disable RSpec/SpecFilePathFormat, RSpec/FilePath
+RSpec.describe Keycloak::Admin::Realms, order: :defined do # rubocop:disable RSpec/SpecFilePathFormat
   before(:all) do # rubocop:disable RSpec/BeforeAfterAll
     agent = Keycloak::Admin::Agent.new
     agent.base_url = 'http://localhost:8080'
@@ -31,12 +31,18 @@ RSpec.describe Keycloak::Admin::Realms, order: :defined do # rubocop:disable RSp
   describe '#create' do
     context 'with invalid attributes' do
       let(:track) { 'create/invalid' }
+      let(:exception) do
+        if ENV['VCR_OFF']
+          Keycloak::Admin::BadRequestError
+        else
+          Keycloak::Admin::InternalServerError
+        end
+      end
 
       it 'raises an error' do
         expect do
           described_class.create(realm: 'acme-corp-realm', invalid: true)
-          # expected Keycloak::Admin::BadRequestError
-        end.to raise_error Keycloak::Admin::InternalServerError
+        end.to raise_error exception
       end
     end
 

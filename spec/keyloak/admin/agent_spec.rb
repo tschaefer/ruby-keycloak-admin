@@ -4,7 +4,7 @@ require 'spec_helper'
 
 require 'keycloak/admin/agent'
 
-RSpec.describe Keycloak::Admin::Agent, order: :defined do # rubocop:disable RSpec/SpecFilePathFormat, RSpec/FilePath
+RSpec.describe Keycloak::Admin::Agent, order: :defined do # rubocop:disable RSpec/SpecFilePathFormat
   subject(:agent) do
     agent = described_class.new
 

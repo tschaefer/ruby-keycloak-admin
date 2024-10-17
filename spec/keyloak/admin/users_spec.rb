@@ -5,7 +5,7 @@ require 'spec_helper'
 require 'keycloak/admin/agent'
 require 'keycloak/admin/users'
 
-RSpec.describe Keycloak::Admin::Users, order: :defined do # rubocop:disable RSpec/SpecFilePathFormat, RSpec/FilePath
+RSpec.describe Keycloak::Admin::Users, order: :defined do # rubocop:disable RSpec/SpecFilePathFormat
   before(:all) do # rubocop:disable RSpec/BeforeAfterAll
     agent = Keycloak::Admin::Agent.new
     agent.base_url = 'http://localhost:8080'
