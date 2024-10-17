@@ -22,6 +22,10 @@ terminate all current sessions of a named users object.
 Further the `Users` and `Groups` interface provide the methods to add,
 remove a users object to a groups object and list memberships.
 
+### Version
+
+The current gem version equates the latest tested Keycloak version.
+
 ## Installation
 
 ```sh
