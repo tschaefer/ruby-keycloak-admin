@@ -4,7 +4,7 @@ require 'spec_helper'
 
 require 'keycloak/admin'
 
-RSpec.describe Keycloak::Admin, order: :defined do # rubocop:disable RSpec/SpecFilePathFormat, RSpec/FilePath
+RSpec.describe Keycloak::Admin, order: :defined do # rubocop:disable RSpec/SpecFilePathFormat
   context 'when not configured' do
     before do
       allow_any_instance_of(Keycloak::Admin::Agent).to receive(:logout).and_return(true)
