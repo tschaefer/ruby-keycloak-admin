@@ -4,7 +4,7 @@ $LOAD_PATH << File.expand_path('lib', __dir__)
 require 'keycloak/admin/version'
 
 Gem::Specification.new do |spec|
-  spec.name        = 'keycloak-admin'
+  spec.name        = 'ruby-keycloak-admin'
   spec.version     = Keycloak::Admin::VERSION
   spec.platform    = Gem::Platform::RUBY
   spec.authors     = ['Tobias Schäfer']
@@ -18,7 +18,7 @@ Gem::Specification.new do |spec|
 
       * https://www.keycloak.org
       * https://www.keycloak.org/documentation
-      * https://www.keycloak.org/docs-api/23.0.7/rest-api/index.html
+      * https://www.keycloak.org/docs-api/26.0.8/rest-api/index.html
 
   DESC
   spec.homepage    = 'https://github.com/tschaefer/keycloak-admin'
