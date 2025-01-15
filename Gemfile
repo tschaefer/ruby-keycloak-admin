@@ -12,6 +12,13 @@ group :development, :test do
   gem 'pry-stack_explorer'
   gem 'pry-theme'
 
+  # silence warnings about deprecated standard gems
+  gem 'csv'
+  gem 'irb'
+  gem 'logger'
+  gem 'ostruct'
+  gem 'reline'
+
   # ruby make
   gem 'rake'
 

@@ -29,10 +29,10 @@ RSpec.describe 'Scenario Pagination' do # rubocop:disable RSpec/DescribeClass
 
   before(:all) do # rubocop:disable RSpec/BeforeAfterAll
     Keycloak::Admin.configure do |config|
-      config.base_url = 'http://localhost:8080'
-      config.realm = 'master'
-      config.username = 'admin'
-      config.password = 'admin'
+      config.base_url = ENV.fetch('KEYCLOAK_BASE_URL', 'http://localhost:8080')
+      config.realm = ENV.fetch('KEYCLOAK_REALM', 'master')
+      config.username = ENV.fetch('KEYCLOAK_USERNAME', 'admin')
+      config.password = ENV.fetch('KEYCLOAK_PASSWORD', 'admin')
     end
 
     if ENV['VCR_OFF']
