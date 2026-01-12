@@ -21,7 +21,7 @@ Gem::Specification.new do |spec|
       * https://www.keycloak.org/docs-api/26.0.8/rest-api/index.html
 
   DESC
-  spec.homepage    = 'https://github.com/tschaefer/keycloak-admin'
+  spec.homepage    = 'https://github.com/tschaefer/ruby-keycloak-admin'
   spec.license     = 'MIT'
 
   spec.files                 = Dir['lib/**/*']
@@ -29,11 +29,11 @@ Gem::Specification.new do |spec|
   spec.required_ruby_version = '>= 3.1'
 
   spec.metadata['rubygems_mfa_required'] = 'true'
-  spec.metadata['source_code_uri']       = 'https://github.com/tschaefer/keycloak-admin'
-  spec.metadata['bug_tracker_uri']       = 'https://github.com/tschaefer/keycloak-admin/issues'
+  spec.metadata['source_code_uri']       = 'https://github.com/tschaefer/ruby-keycloak-admin'
+  spec.metadata['bug_tracker_uri']       = 'https://github.com/tschaefer/ruby-keycloak-admin/issues'
 
   spec.post_install_message = 'All your Keycloak are belong to us!'
 
-  spec.add_dependency 'hashie', '~> 5.0.0'
-  spec.add_dependency 'httparty', '~> 0.21.0'
+  spec.add_dependency 'hashie', '>= 5.0.0'
+  spec.add_dependency 'httparty', '>= 0.21', '< 0.25'
 end
