@@ -25,10 +25,10 @@ module Keycloak
       # *credentials* and id of *realm* to be managed.
       #
       #   Keycloak::Admin.configure do |config|
-      #     config.username   = 'admin',
-      #     config.password   = 'admin',
-      #     config.realm      = 'zone',                         # default: master
-      #     config.base_url   = 'https://keycloak.example.com'  # default: http://localhost:8080
+      #     config.username = 'admin'
+      #     config.password = 'admin'
+      #     config.realm    = 'zone'                          # default: master
+      #     config.base_url = 'https://keycloak.example.com'  # default: http://localhost:8080
       #   end
       def configure
         @agent ||= Keycloak::Admin::Agent.new

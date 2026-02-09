@@ -40,10 +40,10 @@ The required step is to set up a connection to a Keycloak service.
 require 'keycloak/admin'
 
 Keycloak::Admin.configure do |config|
-  config.username   = 'admin',
-  config.password   = 'admin',
-  config.realm      = 'zone',                         # default: master
-  config.base_url   = 'https://keycloak.example.com'  # default: http://localhost:8080
+  config.username = 'admin'
+  config.password = 'admin'
+  config.realm    = 'zone'                          # default: master
+  config.base_url = 'https://keycloak.example.com'  # default: http://localhost:8080
 end
 ```
 
