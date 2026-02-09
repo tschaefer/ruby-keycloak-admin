@@ -18,7 +18,7 @@ Gem::Specification.new do |spec|
 
       * https://www.keycloak.org
       * https://www.keycloak.org/documentation
-      * https://www.keycloak.org/docs-api/26.0.8/rest-api/index.html
+      * https://www.keycloak.org/docs-api/26.5.2/rest-api/index.html
 
   DESC
   spec.homepage    = 'https://github.com/tschaefer/ruby-keycloak-admin'
