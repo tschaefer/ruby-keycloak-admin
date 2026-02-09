@@ -29,10 +29,7 @@ The current gem version equates the latest tested Keycloak version.
 ## Installation
 
 ```sh
- $ gem install --file --without development,test
- $ gem build
- $ VERSION=$(ruby -Ilib -e 'require "keycloak/admin/version"; puts Keycloak::Admin::VERSION')
- $ gem install --local keycloak-admin-${VERSION}.gem
+gem install ruby-keycloak-admin
 ```
 
 ## Usage
