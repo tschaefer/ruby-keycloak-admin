@@ -34,8 +34,6 @@ module Keycloak
         @agent ||= Keycloak::Admin::Agent.new
         yield @agent
         @configured = true
-
-        true
       end
 
       ##
@@ -48,8 +46,6 @@ module Keycloak
       # Raise error if Keycloak::Admin is not configured.
       def configured!
         raise Keycloak::Admin::ConfigurationError, 'Keycloak::Admin is not configured' if !configured?
-
-        true
       end
 
       ##

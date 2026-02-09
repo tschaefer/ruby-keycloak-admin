@@ -43,7 +43,7 @@ RSpec.describe Keycloak::Admin::Clients, order: :defined do # rubocop:disable RS
       let(:track) { 'create/valid' }
 
       it 'creates a client' do
-        expect(described_class.create(client)).to be true
+        expect(described_class.create(client)).to be_nil
       end
     end
 
@@ -125,7 +125,7 @@ RSpec.describe Keycloak::Admin::Clients, order: :defined do # rubocop:disable RS
       let(:track) { 'update/valid' }
 
       it 'updates a group' do
-        expect(described_class.update(id, clientId: 'acme-corp-client')).to be true
+        expect(described_class.update(id, clientId: 'acme-corp-client')).to be_nil
       end
     end
   end
@@ -145,7 +145,7 @@ RSpec.describe Keycloak::Admin::Clients, order: :defined do # rubocop:disable RS
       let(:track) { 'delete/valid' }
 
       it 'deletes a client' do
-        expect(described_class.delete(id)).to be true
+        expect(described_class.delete(id)).to be_nil
       end
     end
   end

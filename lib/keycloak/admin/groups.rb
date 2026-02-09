@@ -24,16 +24,12 @@ module Keycloak
         # Add user to group.
         def add(id, user_id)
           @agent.put("/admin/realms/#{@agent.realm}/users/#{user_id}/groups/#{id}")
-
-          true
         end
 
         ##
         # Remove user from group.
         def remove(id, user_id)
           @agent.delete("/admin/realms/#{@agent.realm}/users/#{user_id}/groups/#{id}")
-
-          true
         end
 
         ##
@@ -52,8 +48,6 @@ module Keycloak
         # Create subgroup.
         def subgroup(id, attributes)
           @agent.post("#{resource}/#{id}/children", params: { body: attributes.to_json })
-
-          true
         end
 
         private

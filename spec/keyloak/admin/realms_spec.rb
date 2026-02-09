@@ -50,7 +50,7 @@ RSpec.describe Keycloak::Admin::Realms, order: :defined do # rubocop:disable RSp
       let(:track) { 'create/valid' }
 
       it 'creates a client' do
-        expect(described_class.create(realm)).to be true
+        expect(described_class.create(realm)).to be_nil
       end
     end
 
@@ -131,7 +131,7 @@ RSpec.describe Keycloak::Admin::Realms, order: :defined do # rubocop:disable RSp
       let(:track) { 'update/valid' }
 
       it 'updates a group' do
-        expect(described_class.update(name, displayName: 'Acme Corp')).to be true
+        expect(described_class.update(name, displayName: 'Acme Corp')).to be_nil
       end
     end
   end
@@ -149,7 +149,7 @@ RSpec.describe Keycloak::Admin::Realms, order: :defined do # rubocop:disable RSp
       let(:track) { 'delete/valid' }
 
       it 'deletes a client' do
-        expect(described_class.delete('acme-corp-realm')).to be true
+        expect(described_class.delete('acme-corp-realm')).to be_nil
       end
     end
   end

@@ -9,6 +9,7 @@ module Keycloak
   module Admin
     class Agent # :nodoc: all
       include HTTParty
+
       headers 'Accept' => 'application/json', 'Content-Type' => 'application/json'
       debug_output $stdout if ENV['KEYCLOAK_ADMIN_DEBUG']
 
@@ -56,7 +57,7 @@ module Keycloak
       private
 
       def create_session
-        return false if !session_expired?
+        return if !session_expired?
 
         response = self.class.post(
           "#{@base_url}/realms/master/protocol/openid-connect/token",
@@ -72,13 +73,11 @@ module Keycloak
         Keycloak::Admin.raise_error(response) if !response.code.between?(200, 299)
 
         store_session(response)
-
-        true
       end
 
       def refresh_session
-        return false if !session_running?
-        return false if refresh_expired?
+        return if !session_running?
+        return if refresh_expired?
 
         response = self.class.post(
           "#{@base_url}/realms/master/protocol/openid-connect/token",
@@ -90,17 +89,15 @@ module Keycloak
           }
         )
 
-        return false if response.code.eql?(400)
+        return if response.code.eql?(400)
         return Keycloak::Admin.raise_error(response) if !response.code.between?(200, 299)
 
         store_session(response)
-
-        true
       end
 
       def terminate_session
-        return false if !session_running?
-        return false if refresh_expired?
+        return if !session_running?
+        return if refresh_expired?
 
         response = self.class.post(
           "#{@base_url}/realms/master/protocol/openid-connect/logout",
@@ -114,8 +111,6 @@ module Keycloak
         @session = nil
 
         Keycloak::Admin.raise_error(response) if !response.code.between?(200, 299)
-
-        true
       end
 
       def store_session(response)

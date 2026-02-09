@@ -13,6 +13,7 @@ module Keycloak
     module Realms
       class << self
         include Keycloak::Admin::Resource
+
         if method_defined? :find_by_id
           alias find_by_name find_by_id
           undef find_by_id

@@ -43,7 +43,7 @@ RSpec.describe Keycloak::Admin::Groups, order: :defined do # rubocop:disable RSp
       let(:track) { 'create/valid' }
 
       it 'creates a group' do
-        expect(described_class.create(group)).to be true
+        expect(described_class.create(group)).to be_nil
       end
     end
 
@@ -125,7 +125,7 @@ RSpec.describe Keycloak::Admin::Groups, order: :defined do # rubocop:disable RSp
       let(:track) { 'update/valid' }
 
       it 'updates a group' do
-        expect(described_class.update(id, name: 'acme-corp-ltd')).to be true
+        expect(described_class.update(id, name: 'acme-corp-ltd')).to be_nil
       end
     end
   end
@@ -145,7 +145,7 @@ RSpec.describe Keycloak::Admin::Groups, order: :defined do # rubocop:disable RSp
       let(:track) { 'delete/valid' }
 
       it 'deletes a group' do
-        expect(described_class.delete(id)).to be true
+        expect(described_class.delete(id)).to be_nil
       end
     end
   end

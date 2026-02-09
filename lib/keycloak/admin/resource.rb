@@ -4,6 +4,10 @@ require 'hashie'
 
 module Keycloak
   module Admin
+    class ResourceObject < Hashie::Mash
+      disable_warnings
+    end
+
     ##
     # Abstract class for Keycloak::Admin resources with common methods.
     #
@@ -29,16 +33,12 @@ module Keycloak
       # Create a new resource object.
       def create(attributes)
         @agent.post(resource, params: { body: attributes.to_json })
-
-        true
       end
 
       ##
       # Delete a resource object by id.
       def delete(id)
         @agent.delete("#{resource}/#{id}")
-
-        true
       end
 
       ##
@@ -70,8 +70,6 @@ module Keycloak
       # Update a resource object by id.
       def update(id, attributes)
         @agent.put("#{resource}/#{id}", params: { body: attributes.to_json })
-
-        true
       end
       alias edit update
 
@@ -93,9 +91,9 @@ module Keycloak
 
       def mash(object)
         if object.is_a?(Array)
-          object.map { |item| Hashie::Mash.new(item) }
+          object.map { |item| ResourceObject.new(item) }
         else
-          Hashie::Mash.new(object)
+          ResourceObject.new(object)
         end
       end
     end

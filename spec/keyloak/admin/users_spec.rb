@@ -60,7 +60,7 @@ RSpec.describe Keycloak::Admin::Users, order: :defined do # rubocop:disable RSpe
       let(:track) { 'create/valid' }
 
       it 'creates a user' do
-        expect(described_class.create(user)).to be true
+        expect(described_class.create(user)).to be_nil
       end
     end
   end
@@ -116,7 +116,7 @@ RSpec.describe Keycloak::Admin::Users, order: :defined do # rubocop:disable RSpe
       let(:track) { 'update/valid' }
 
       it 'updates a user' do
-        expect(described_class.update(id, emailVerified: true)).to be true
+        expect(described_class.update(id, emailVerified: true)).to be_nil
       end
     end
   end
@@ -136,7 +136,7 @@ RSpec.describe Keycloak::Admin::Users, order: :defined do # rubocop:disable RSpe
       let(:track) { 'delete/valid' }
 
       it 'deletes a user' do
-        expect(described_class.delete(id)).to be true
+        expect(described_class.delete(id)).to be_nil
       end
     end
   end

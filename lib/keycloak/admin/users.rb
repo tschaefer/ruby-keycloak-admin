@@ -26,16 +26,12 @@ module Keycloak
         # Add user to group.
         def join(id, group_id)
           @agent.put("#{resource}/#{id}/groups/#{group_id}")
-
-          true
         end
 
         ##
         # Remove user from group.
         def leave(id, group_id)
           @agent.delete("#{resource}/#{id}/groups/#{group_id}")
-
-          true
         end
 
         ##
@@ -54,8 +50,6 @@ module Keycloak
         # Logout user from all sessions.
         def logout(id)
           @agent.post("#{resource}/#{id}/logout")
-
-          true
         end
 
         ##
@@ -64,8 +58,6 @@ module Keycloak
           # { temporary: false, value: 'password' }
           attributes[:type] = 'password'
           @agent.put("#{resource}/#{id}/reset-password", params: { body: attributes.to_json })
-
-          true
         end
 
         ##
